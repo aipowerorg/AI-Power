@@ -1,0 +1,118 @@
+[dir=rtl] #wpcgai_tabs.ui-tabs .ui-tabs-nav li{
+    float: right!important;
+}
+[dir=rtl] .wpaicg_editor_menu_close{
+    right: auto;
+    left: 2px;
+}
+[dir=rtl] .wpaicg-chatbox-send,[dir=rtl] .wpaicg-chat-shortcode-send{
+    rotate: 180deg;
+}
+[dir=rtl] .wpaicg-mic-icon{
+    right: auto;
+    left: 47px;
+}
+[dir=rtl] .wpaicg-chat-shortcode-content ul li strong,[dir=rtl] .wpaicg-chatbox-content ul li strong{
+    float: right!important;
+    margin-right: 0;
+    margin-left: 5px;
+}
+[dir=rtl] .wpaicg_widget_left{
+    left: auto;
+    right: 15px;
+}
+[dir=rtl] .wpaicg_widget_right{
+    right: auto;
+    left: 15px;
+}
+[dir=rtl] .wpaicg_widget_right .wpaicg_chat_widget_content{
+    right: auto;
+    left: 0;
+}
+[dir=rtl] .wpaicg_widget_left .wpaicg_chat_widget_content{
+    right: 0;
+    left: auto;
+}
+[dir=rtl] .wpaicg_modal,
+[dir=rtl] .wpaicg_modal_second,
+[dir=rtl] .wpaicg_modal_content .wpaicg_message,
+[dir=rtl] .wpaicg_modal_content{
+    direction: rtl;
+}
+[dir=rtl] .wpaicg_modal_close_second,
+[dir=rtl] .wpaicg_modal_close{
+    right: auto;
+    left: 10px;
+}
+[dir=rtl] .wpaicg-bot-footer{
+    margin-left: auto;
+    margin-right: -21px;
+    width: calc(100% - 20px);
+}
+[dir=rtl] .wpaicg-template-content,
+[dir=rtl] .wpaicg-prompt-content,
+[dir=rtl] .wpaicg-modal-prompt-head > div:nth-child(2),
+[dir=rtl] .wpaicg-modal-template-head > div:nth-child(2)
+{
+    margin-left: auto!important;
+    margin-right: 10px;
+}
+[dir=rtl] .wpaicg-field-delete,
+[dir=rtl] .wpaicg-faq-close,
+[dir=rtl] .wpaicg-contact-close,
+[dir=rtl] .wpaicg-company-close,
+[dir=rtl] .wpaicg-event-close,
+[dir=rtl] .wpaicg-knowledge-close,
+[dir=rtl] .wpaicg-pricing-close,
+[dir=rtl] .wpaicg-product-close,
+[dir=rtl] .wpaicg-link-close,
+[dir=rtl] .wpaicg-wooproduct-close
+{
+    right: auto;
+    left: 5px;
+}
+[dir=rtl] .wpaicg-create-form-field{
+    margin-left: auto!important;
+    margin-right: 5px;
+}
+[dir=rtl] .wpaicg-role-title > div > span{
+    margin-right: auto;
+    margin-left: 10px;
+}
+[dir=rtl] .wpaicg-role-item label > span{
+    margin-left: auto!important;
+    margin-right: 5px;
+}
+[dir=rtl] .gpt-ai-power_page_wpaicg_help .ui-tabs .ui-tabs-nav .ui-tabs-anchor{
+    float: right;
+}
+[dir=rtl] .gpt-ai-power_page_wpaicg_help .ui-tabs-vertical .ui-tabs-nav{
+    float: right;
+}
+[dir=rtl] .wpcgai_container{
+    float: right
+}
+
+[dir=rtl] .wpaicg-collapse-title > small{
+    margin-left: auto!important;
+    margin-right: 5px;
+}
+[dir=rtl] .wpaicg_chatbot_position{
+    direction: rtl;
+    display: flex;
+    align-items: center;
+}
+[dir=rtl] .wpaicg_chatbot_position input{
+    margin: 0 2px;
+}
+[dir=rtl] .wpaicg_chatbot_position input:nth-child(3){
+    margin-right: 10px;
+}
+[dir=rtl] .wpaicg_account_header_item{
+    direction: rtl;
+    display: flex;
+}
+[dir=rtl] .wpcgai_lds-ellipsis{}
+[dir=rtl] .wpcgai_lds-ellipsis .wpaicg-generating-title{
+    text-align: right;
+}

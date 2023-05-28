@@ -1,0 +1,420 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .wpcgai_lds-ellipsis {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  width: 200px;
+  height: unset;
+  background-color: rgb(16, 75, 16);
+  padding: 70px 14px;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+}
+
+.wpcgai_lds-ellipsis div {
+  display: none;
+}
+
+.wpcgai_lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: wpcgai_lds-ellipsis1 0.6s infinite;
+}
+
+.wpcgai_lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: wpcgai_lds-ellipsis2 0.6s infinite;
+}
+
+.wpcgai_lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: wpcgai_lds-ellipsis2 0.6s infinite;
+}
+
+.wpcgai_lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: wpcgai_lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes wpcgai_lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wpcgai_lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes wpcgai_lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+
+.wpcgai_menu_editor,
+
+.wpcgai_menu_editor ul ul,
+ol ul,
+ul ol,
+ol ol {
+  list-style-type: none;
+}
+
+
+#wpcgai_remove_heading {
+  font-size: 19px;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #FF3131;
+  text-decoration: none;
+}
+
+#wpcgai_remove_heading:hover {
+  color: #2271b1;
+  text-decoration: underline;
+}
+
+#wpcgai_add_new_heading {
+  color: green;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 28px !important;
+}
+
+#wpcgai_add_new_heading:hover {
+  color: #2271b1;
+  text-decoration: underline;
+}
+
+.wpcgai_sort_heading {
+  color: #000;
+  font-size: 24px;
+  vertical-align: middle;
+  cursor: all-scroll;
+  margin: 0 5px;
+}
+
+.wpcgai_sort_heading:hover {
+  color: #2271b1;
+}
+
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color: #00000063;
+  padding-top: 100px;
+  overflow: scroll !important;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+
+.wpcgai_modal-content {
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: 0;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+
+.wpcgai_modal-header {
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+}
+
+.wpcgai_modal-header .close {
+  margin-top: -2px;
+}
+
+.wpcgai_modal-title {
+  margin: 0;
+  line-height: 1.42857143;
+}
+
+.wpcgai_modal-body {
+  position: relative;
+  padding: 15px;
+}
+
+.wpcgai_modal-footer {
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+}
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+}
+
+button.close {
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  filter: alpha(opacity=50);
+  opacity: .5;
+}
+
+@media (min-width: 768px) {
+  .modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+  }
+
+  .wpcgai_modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .modal-sm {
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg {
+    width: 900px;
+  }
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+.wpcgai_hide {
+  display: none !important;
+}
+
+.wpcgai_show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.modal-backdrop {
+  z-index: -999;
+}
+
+body.modal-open {
+  overflow: hidden !important;
+  position: fixed !important;
+}
+
+.wpcgai_input {
+  box-sizing: border-box;
+  width: 250px;
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  font-size: 16px;
+  /* Font size */
+  resize: vertical;
+  /* Allow the input to be resized vertically */
+}
+
+/* On smaller screens, make the input element smaller */
+@media (max-width: 600px) {
+  .wpcgai_input {
+    width: 80%;
+    /* Decrease width */
+  }
+}
+
+/* On even smaller screens, make the input element even smaller */
+@media (max-width: 400px) {
+  .wpcgai_input {
+    width: 60%;
+    /* Decrease width further */
+  }
+}
+
+textarea {
+  width: 100%;
+}
+
+/* GPT3 Settings form-gpt3 Styling */
+
+.wpcgai_container_help_table {
+  line-height: 1.5;
+}
+
+.wpcgai_container_help_table tr,
+.wpcgai_container_help_table th,
+.wpcgai_container_help_table td {
+  border: 1px solid #ccc;
+}
+
+.wpcgai_container_help_img {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+}
+
+.wpcgai_container_help_mark {
+  background-color: rgb(246, 246, 166);
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.wpcgai_container_help_h3 {
+  background-color: rgb(253, 148, 0);
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.wpcgai_container {
+  border: 1px solid linear-gradient(to bottom, #DEDBD1, #EAE8E1);
+  width: 900px;
+  height: auto;
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.wpcgai_form_row {
+  align-items: center;
+  justify-content: flex-start;
+  /* This will align all elements to the left */
+  margin-bottom: 0.5em;
+}
+
+.wpcgai_label,
+.wpcgai_help_link {
+  flex: 1;
+  /* This will make all elements have equal width */
+}
+
+.wpcgai_label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-right: 0.5em;
+  width: 30%;
+  display: inline-block;
+}
+
+
+.wpcgai_button {
+  align-self: flex-end;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFF;
+  background-color: #3399FF;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wpcgai_button:hover {
+  background-color: #2277CC;
+}
+
+.wpcgai_button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.wpcgai_help_link {
+  display: inline-block;
+  margin-left: 0.5em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #3399FF;
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+  font-weight: 600;
+}
+
+.wpcgai_help_link:hover {
+  color: #44AAFF;
+  cursor: pointer;
+}
+
+.wpcgai_help_link:active {
+  color: #2277CC;
+}
+
+.wpcgai_help_link:focus {
+  outline: none;
+}

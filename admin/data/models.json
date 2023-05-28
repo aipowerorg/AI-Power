@@ -1,0 +1,20 @@
+{
+    "models": [
+        {
+            "name": "text-davinci-003",
+            "id": "davinci"
+        },
+        {
+            "name": "text-curie-001",
+            "id": "curie"
+        },
+        {
+            "name": "text-babbage-001",
+            "id": "babbage"
+        },
+        {
+            "name": "text-babbage-002",
+            "id": "babbage-002"
+        }
+    ]
+}

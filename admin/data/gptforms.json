@@ -1,0 +1,3035 @@
+[
+    {
+        "id": 11,
+        "icon": "linkedin",
+        "color": "#F44336",
+        "title": "Networking",
+        "description": "Generates a personalized message for connecting with a potential professional contact",
+        "category": "generation,conversation,linkedin,social-media",
+        "max_tokens": 700,
+        "stop": [
+            "\n"
+        ],
+        "prompt": "Hello, my name is {personname} and I am a {personprofession}. I came across your profile and was impressed by your experience in the {personindustry} industry. I would love to connect and learn more about your work. Can you please tell me more about your experience and current projects?\n\n",
+        "response": "Hi John, thanks for reaching out. I am currently a Senior Engineer at XYZ Company, where I lead the development of our flagship product. I have over 8 years of experience in software engineering and am particularly interested in exploring new technologies and techniques to deliver better products. I would be happy to connect and discuss more about our work in the industry.",
+        "fields": [
+            {
+                "id": "personname",
+                "label": "Your Name",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personprofession",
+                "label": "Your Profession",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personindustry",
+                "label": "Your Industry",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 12,
+        "icon": "person1",
+        "color": "#9C27B0",
+        "title": "Career Development",
+        "description": "Provides advice for advancing your career",
+        "category": "coaching,generation,linkedin",
+        "max_tokens": 700,
+        "stop": [
+            "\n"
+        ],
+        "prompt": "I have been working as a {personprofession} for {personexperience} now in the {personindustry} industry and I am seeking advice for {seekingadvicefor}. Can you please provide me with some advice on how to do this?\n\n",
+        "response": "There are many ways to advance your career as a software developer. Some things you can do include:\n-Continuing to learn and improve your skills through online resources, attending conferences and networking with other professionals in your field.\n-Developing a strong portfolio of your work to showcase your abilities.\n-Taking on leadership roles or mentoring others in your team.\n-Exploring new opportunities and industries that align with your interests and goals.",
+        "fields": [
+            {
+                "id": "personprofession",
+                "label": "Your Profession",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personexperience",
+                "label": "Experience",
+                "type": "select",
+                "options": [
+                    "Less than a year",
+                    "Between 1 and 3 years",
+                    "Between 3 and 5 years",
+                    "Between 5 and 10 years",
+                    "More than 10 years"
+                ]
+            },
+            {
+                "id": "personindustry",
+                "label": "Your Industry",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "seekingadvicefor",
+                "label": "Seeking Advice For",
+                "type": "select",
+                "options": [
+                    "Career Advancement",
+                    "Career Change",
+                    "Job Search",
+                    "Interview Preparation",
+                    "Networking"
+                ]
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 3,
+        "icon": "coach",
+        "color": "#00BFFF",
+        "title": "Business Strategy Advisor",
+        "description": "Generate innovative solutions to grow your business.",
+        "category": "business,coaching",
+        "max_tokens": 300,
+        "temperature": 0.5,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "List 10 potential strategies to solve a problem in business, including unconventional ones.\n\nProblem: Lack of sales growth\nSolution Ideas:\n\n1. Diversify your product line\n2. Personalize your marketing approach\n3. Utilize customer data to drive sales\n4. Offer value-added services\n5. Network with complementary businesses\n6. Invest in employee training and development\n7. Expand your target market\n8. Utilize innovative technologies\n9. Create a strong brand image\n10. Leverage partnerships and collaborations\n\nProblem: {bsaproblem}\nSolution Ideas:\n\n",
+        "response": "Problem: Boost business revenue\nSolution Ideas:\n\n1. Focus on customer satisfaction\n2. Offer product bundles\n3. Utilize upsell and cross-sell techniques\n4. Streamline your sales process\n5. Utilize retargeting advertising\n6. Foster customer loyalty\n7. Invest in market research\n8. Utilize influencer marketing\n9. Offer limited-time promotions\n10. Optimize your website for conversions",
+        "fields": [
+            {
+                "id": "bsaproblem",
+                "label": "Problem",
+                "type": "text",
+                "min": 5,
+                "max": 80
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 1,
+        "icon": "search",
+        "color": "#F39C12",
+        "title": "SEO Meta Description Generator",
+        "description": "Generate an SEO friendly meta description for a website page.",
+        "category": "generation,seo,google",
+        "max_tokens": 160,
+        "temperature": 0.6,
+        "prompt": "Generate an SEO friendly meta description for a website: {websitename}",
+        "response": "Shop the latest fashion trends at our online clothing store. Discover a wide selection of clothing for men, women and children, at affordable prices and great quality. Free shipping and easy returns. Shop now!",
+        "fields": [
+            {
+                "id": "websitename",
+                "label": "Website Name",
+                "type": "text",
+                "min": 5,
+                "max": 80
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 2,
+        "icon": "google",
+        "color": "#3987D2",
+        "title": "Google AdWords Headline Generator",
+        "description": "Generate headlines for Google AdWords ads.",
+        "category": "generation,seo,google",
+        "max_tokens": 50,
+        "temperature": 0.5,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a {headlinetype} headlines for a Google AdWords ad for a {businessname}",
+        "response": "Freshly Brewed Coffee - Visit Our Shop Today!",
+        "fields": [
+            {
+                "id": "headlinetype",
+                "label": "Headline Type",
+                "type": "select",
+                "options": [
+                    "Creative",
+                    "Catchy",
+                    "Unique"
+                ]
+            },
+            {
+                "id": "businessname",
+                "label": "Business Name",
+                "type": "text",
+                "min": 5,
+                "max": 80
+            }
+        ],
+        "editor": "div"
+    },
+    {
+        "id": 4,
+        "icon": "thumbs",
+        "color": "#34495E",
+        "title": "Content Marketing Strategy Generator",
+        "description": "Generate a content marketing strategy for a business.",
+        "category": "generation,marketing",
+        "max_tokens": 1000,
+        "temperature": 0.6,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.2,
+        "prompt": "Generate a content marketing strategy for a business. Business: {businessname}\n\n",
+        "response": "1. Develop a content calendar: Develop a content calendar that outlines the topics and types of content that will be created over a certain period of time. This will help the business stay organized and ensure that all content is relevant to their target audience.\n\n2. Identify target audience: Identify the target audience for the fitness gym and develop content that will appeal to that particular audience. This can include content about particular exercises, workouts, nutrition, and fitness tips.\n\n3. Establish a brand voice: Establish a distinct and unified brand voice that will be used across all content created for the fitness gym. This will help to ensure that all content is consistent and on-brand.\n\n4. Create content: Create content that is engaging and informative. This can include blog posts, videos, infographics, and social media posts.\n\n5. Promote content: Utilize paid and organic channels to promote the content created for the fitness gym. This includes social media, email marketing, and search engine optimization (SEO).\n\n6. Track results: Track the performance of the content created and use the data gathered to adjust the content marketing strategy as needed.",
+        "fields": [
+            {
+                "id": "businessname",
+                "label": "Business",
+                "type": "text",
+                "min": 5,
+                "max": 80
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 5,
+        "icon": "event",
+        "color": "#9B59B6",
+        "title": "Social Media Marketing Plan Generator",
+        "description": "Generate a social media marketing plan for a business.",
+        "category": "generation,marketing,social-media",
+        "max_tokens": 1000,
+        "temperature": 0.6,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.2,
+        "prompt": "Generate a social media marketing plan for a business. Business: {businessname}\n\n",
+        "response": "Objective: Increase sales of the online clothing store\n\n1. Utilize Facebook to reach potential customers:\n\n- Promote the business page and share clothing item posts \n- Utilize targeted ads that are tailored to people’s interests \n- Run contests and giveaways to build brand awareness \n- Develop relationships with influencers in the fashion industry \n\n2. Utilize Instagram to reach potential customers:\n\n- Post engaging photos and videos of clothing items \n- Utilize hashtags and user-generated content to build engagement \n- Utilize targeted ads to reach potential customers \n- Develop relationships with influencers in the fashion industry \n\n3. Utilize Twitter to reach potential customers:\n\n- Post engaging tweets and retweets of relevant content \n- Utilize hashtags and user-generated content to build engagement \n- Utilize targeted ads to reach potential customers \n- Develop relationships with influencers in the fashion industry \n\n4. Utilize YouTube to reach potential customers:\n\n- Create high-quality videos featuring clothing items \n- Utilize targeted ads to reach potential customers \n- Utilize influencers to create videos featuring the clothing items \n- Utilize hashtags to help videos reach a wider audience \n\n5. Utilize Pinterest to reach potential customers:\n\n- Create high-quality visuals of clothing items \n- Utilize targeted ads to reach potential customers \n- Utilize influencers to create visuals featuring the clothing items \n- Utilize hashtags to help visuals reach a wider audience \n\n6. Utilize Google Ads to reach potential customers:\n\n- Utilize targeted ads to reach potential customers \n- Utilize keywords to target customers searching for clothing items \n- Utilize retargeting to reach customers who have previously visited the online store \n\n7. Monitor and Analyze:\n\n- Monitor all social media accounts to monitor comments and respond to any customer inquiries \n- Analyze all social media data to determine what content is performing well and what content needs improvement \n- Analyze all advertising data to determine the ROI of the campaigns \n\nOverall, the goal of this social media marketing plan is to increase sales of the online clothing store by utilizing various social media platforms to reach potential customers and build relationships with influencers in the fashion industry.",
+        "fields": [
+            {
+                "id": "businessname",
+                "label": "Business",
+                "type": "text",
+                "min": 5,
+                "max": 80
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 6,
+        "icon": "cart",
+        "color": "#FF00DC",
+        "title": "WooCommerce Product Comparison Generator",
+        "description": "Generate a product comparison for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 250,
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.05,
+        "prompt": "Generate a product comparison for a WooCommerce product. Product: {productname}\n\n",
+        "response": "When it comes to electric toothbrushes, there are a lot of options to choose from. However, our Electric Toothbrush stands out from the rest. It features advanced technology that offers a deep clean, while still being gentle on teeth and gums. It also has a longer battery life and more brush head options than other leading brands. So, if you're looking for a high-quality toothbrush that will leave your mouth feeling fresh and clean, our Electric Toothbrush is the way to go.",
+        "fields": [
+            {
+                "id": "productname",
+                "label": "Product Name",
+                "type": "text",
+                "min": 5,
+                "max": 80
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 7,
+        "icon": "cart",
+        "color": "#006400",
+        "title": "WooCommerce Product Upsell Generator",
+        "description": "Generate a product upsell for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 150,
+        "temperature": 0.6,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a product upsell for a WooCommerce product. Product: {productname}\n\n",
+        "response": "Enhance your laptop protection with our high-quality Laptop Case. Made of durable materials, it is specifically designed to fit your laptop and keep it safe from scratches, dings, and everyday wear and tear. Additionally, it has a convenient handle and a shoulder strap for easy carrying. Upgrade your laptop protection today!",
+        "fields": [
+            {
+                "id": "productname",
+                "label": "Product Name",
+                "type": "text",
+                "min": 5,
+                "max": 80
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 8,
+        "icon": "facebook",
+        "color": "#0F8FF2",
+        "title": "Facebook Ad Headline Generator",
+        "description": "Generate a persuasive headline for a Facebook ad.",
+        "category": "generation,social-media,facebook",
+        "max_tokens": 50,
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a persuasive headline for a Facebook ad promoting a sale on: {productname}.\n\n",
+        "response": "Limited Time Offer: Up to 50% off on all clothing! 🛍️ #sale #clothes",
+        "fields": [
+            {
+                "id": "productname",
+                "label": "Product",
+                "type": "text",
+                "min": 5,
+                "max": 80
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 9,
+        "icon": "reddit",
+        "color": "#FF4500",
+        "title": "Reddit Discussion",
+        "description": "Generates a thoughtful and well-reasoned discussion for Reddit",
+        "category": "generation,social-media",
+        "max_tokens": 700,
+        "prompt": "What are the pros and cons of {discussiontopic}? Discuss.\n\n",
+        "response": "The shift to remote work has been a hot topic in recent years, with many companies implementing it as a permanent option. One of the biggest pros of remote work is the flexibility it offers employees. Without the commute, workers have more time to spend with their families, pursue hobbies, and take care of personal responsibilities. Additionally, remote work can lead to increased productivity and job satisfaction. However, remote work also has its downsides. It can be isolating and lead to feelings of disconnection from the company and colleagues. It can also be difficult to separate work and home life, leading to burnout. Additionally, remote work can make it harder to collaborate and communicate effectively with team members. Overall, while remote work has its benefits, it's important for companies to weigh the pros and cons and implement strategies to mitigate the negative effects.",
+        "fields": [
+            {
+                "id": "discussiontopic",
+                "label": "Topic",
+                "type": "text",
+                "min": 5,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 113,
+        "icon": "coach",
+        "color": "#32CD32",
+        "title": "Successful Business Coach",
+        "description": "Generate a list of 10 promising ideas for solving a problem in business.",
+        "category": "coaching,business",
+        "max_tokens": 500,
+        "temperature": 0.5,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a list of {numberofideas} promising ideas for solving the problem: {problem}.\n\n",
+        "response": "1. Learn to delegate tasks effectively\n2. Say no to new projects to focus on current ones\n3. Prioritize the most impactful tasks\n4. Set clear milestones for each project\n5. Consider hiring additional help\n6. Automate routine tasks\n7. Set daily/weekly/monthly goals\n8. Break down projects into smaller, manageable tasks\n9. Take breaks to avoid burnout\n10. Find a trusted colleague to keep you on track.",
+        "fields": [
+            {
+                "id": "numberofideas",
+                "label": "Number of Ideas",
+                "type": "select",
+                "options": [
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ]
+            },
+            {
+                "id": "problem",
+                "label": "Problem",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 13,
+        "icon": "resume",
+        "color": "#4CAF50",
+        "title": "Resume Optimization",
+        "description": "Optimizes and improves the language and formatting of your resume for better chances of getting hired.",
+        "category": "transformation,generation,linkedin,coaching",
+        "max_tokens": 1200,
+        "prompt": "Write a resume for:\n\nName: {personname}. Age: {personage}. Graduated from {persongrad}. Education: {personedu}. Have experience in {personexp}. Skills: {personskills}.\n\n",
+        "response": "John\n24 | Computer Science\n\nSkills\nPython programming\n\nExperience\nPython Programmer | ABC Company | 2019 - Present\nDeveloped and maintained Python applications for various projects\nOptimized existing code to improve performance and scalability\nCreated automated scripts to streamline processes\nCollaborated with other developers to troubleshoot and resolve issues\nProvided technical support to end-users\nEducation\nBachelor of Science in Computer Science | University of XYZ | 2016 - 2019",
+        "fields": [
+            {
+                "id": "personname",
+                "label": "Your Name",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personage",
+                "label": "Your Age",
+                "type": "number",
+                "min": 1,
+                "max": 120
+            },
+            {
+                "id": "persongrad",
+                "label": "Graduated From",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personedu",
+                "label": "Education",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personexp",
+                "label": "Experience",
+                "type": "text",
+                "min": 1,
+                "max": 120
+            },
+            {
+                "id": "personskills",
+                "label": "Skills",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 14,
+        "icon": "linkedin",
+        "color": "#00ff00",
+        "title": "Networking Introduction",
+        "description": "Generates a personalized introduction for networking on LinkedIn.",
+        "category": "generation,conversation,linkedin,social-media",
+        "max_tokens": 900,
+        "temperature": 0.5,
+        "prompt": "Write a personalized introduction on LinkedIn for {personname}, a {personprofession} in the {personindustry} industry.\n\n",
+        "response": "Hello, I'm John Smith, a Software Engineer in the Tech industry. I'm passionate about developing innovative solutions to complex problems and helping businesses succeed.",
+        "fields": [
+            {
+                "id": "personname",
+                "label": "Your Name",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personprofession",
+                "label": "Your Profession",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personindustry",
+                "label": "Your Industry",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 15,
+        "icon": "linkedin",
+        "color": "#0000ff",
+        "title": "Endorsement Language",
+        "description": "Generates personalized language for endorsing and recommending a LinkedIn connection.",
+        "category": "generation,conversation,linkedin,social-media",
+        "max_tokens": 900,
+        "temperature": 0.5,
+        "prompt": "Write an endorsement for: {personname}, a {personprofession} with {personskills} skills.\n\n",
+        "response": "I am pleased to endorse John Smith as a Product Manager. He has demonstrated strong skills in product management, leadership, and communication. He is an effective problem-solver and is able to think critically and strategically to develop solutions. He is also a great team player and is able to work collaboratively with colleagues to achieve desired outcomes. I highly recommend John for any product management role.",
+        "fields": [
+            {
+                "id": "personname",
+                "label": "Your Name",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personprofession",
+                "label": "Your Profession",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "personskills",
+                "label": "Your Skills",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 16,
+        "icon": "linkedin",
+        "color": "#0077B5",
+        "title": "LinkedIn Post Generator",
+        "description": "Generate a LinkedIn post that highlights your professional achievements.",
+        "category": "generation,social-media,linkedin",
+        "max_tokens": 300,
+        "temperature": 0.5,
+        "prompt": "Generate a LinkedIn post that highlights my recent promotion and the skills I used to achieve it: {newposition} at {companyname}.\n\n",
+        "response": "Exciting news! I am thrilled to announce that I have been promoted to [position] at [company]. This is a testament to the hard work and dedication I have put into my role, as well as my ability to [skill 1], [skill 2], and [skill 3]. I am looking forward to taking on new challenges and continuing to grow in my career. #promotion #careergrowth #[industry]",
+        "fields": [
+            {
+                "id": "newposition",
+                "label": "New Position Title",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            },
+            {
+                "id": "companyname",
+                "label": "Company Name",
+                "type": "text",
+                "min": 3,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 17,
+        "icon": "twitter",
+        "color": "#1DA1F2",
+        "title": "Twitter Thread Generator",
+        "description": "Generate a Twitter thread on a topic of your choice.",
+        "category": "generation,social-media,twitter",
+        "max_tokens": 150,
+        "temperature": 0.3,
+        "prompt": "Generate a Twitter thread about the importance of {topic}.\n\n",
+        "response": "Thread alert: Let's talk about mental health. 1/ Mental health is just as important as physical health, yet it is often overlooked. 2/ Taking care of your mental health can improve overall well-being and reduce the risk of mental health disorders. 3/ Small actions like talking to a therapist, practicing self-care, and reaching out to friends and family can make a big difference. 4/ Remember, it's okay to not be okay. Reach out for help if you need it. #mentalhealthawareness #selfcare",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 18,
+        "icon": "instagram",
+        "color": "#E1306C",
+        "title": "Instagram Caption Generator",
+        "description": "Generate an Instagram caption that adds context to your photo.",
+        "category": "generation,social-media,instagram",
+        "max_tokens": 150,
+        "temperature": 0.5,
+        "prompt": "Generate an Instagram caption for a picture of a {object}.\n\n",
+        "response": "Sometimes the simplest things in life are the most beautiful. #sunset #nature #beauty",
+        "fields": [
+            {
+                "id": "object",
+                "label": "Object",
+                "type": "text",
+                "min": 2,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 19,
+        "icon": "facebook",
+        "color": "#007ACC",
+        "title": "Post for Facebook",
+        "description": "Generates a creative and engaging post for Facebook",
+        "category": "generation,social-media,facebook",
+        "max_tokens": 300,
+        "temperature": 0.5,
+        "prompt": "Write a post about the benefits of {topic}.\n\n",
+        "response": "Feeling sluggish? Regular exercise not only improves your physical health, but it also boosts your mood and energy levels. So lace up those sneakers and hit the pavement for a run, hit the gym for a workout, or simply take a brisk walk around your neighborhood. Your body (and mind) will thank you! #fitness #health #exercise",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 20,
+        "icon": "twitter",
+        "color": "#FFE4C4",
+        "title": "Tweet Summary of News Article",
+        "description": "This prompt allows you to summarize the main points of a news article and tweet it.",
+        "category": "classification,social-media,twitter,summarization",
+        "max_tokens": 60,
+        "frequency_penalty": 0.6,
+        "presence_penalty": 0.5,
+        "prompt": "Create a tweet summarizing the main points of a news article. \n\nArticle Title: {news}\n\n",
+        "response": "Tweet: A new study has found a correlation between air pollution and heart disease, highlighting the need for improved air quality to protect public health. #AirPollution #HeartDisease",
+        "fields": [
+            {
+                "id": "news",
+                "label": "Headline",
+                "type": "text",
+                "min": 2,
+                "max": 400
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 21,
+        "icon": "blog",
+        "color": "#ADFF2F",
+        "title": "Blog Post About a New Product",
+        "description": "Write a blog post to introduce a new product to readers.",
+        "category": "generation,blog,product,woocommerce",
+        "max_tokens": 900,
+        "temperature": 0.7,
+        "prompt": "Product: {product} - {productshortdescription}.\n\nBlog post title: {blogtitle}\n\n",
+        "response": "Are you tired of lugging around a heavy vacuum cleaner and constantly bending down to adjust settings? Meet the Smart Vacuum – the future of cleaning. This revolutionary robotic vacuum cleaner is not only controlled with voice commands but also has built-in mapping technology to ensure every corner of your home is cleaned with precision.\n\nThe Smart Vacuum is equipped with advanced sensors that allow it to navigate around furniture and avoid obstacles. It also has the ability to clean multiple rooms at once, making it a time-efficient solution for busy homeowners.\n\nOne of the standout features of the Smart Vacuum is its ability to create a map of your home. This means it can clean specific rooms or areas on command and can even be scheduled to clean while you're away. The vacuum also has a range of customizable cleaning modes, including spot cleaning and deep cleaning, to suit your needs.\n\nNot only is the Smart Vacuum smart, but it’s also efficient. It has a powerful suction system that can pick up dirt, dust, and pet hair with ease. Plus, the vacuum’s filter system captures 99.97% of particles, making it a great option for those with allergies or asthma.\n\nThe Smart Vacuum is also easy to maintain. It has a self-emptying dustbin and washable filter, so you don’t have to worry about constantly buying replacement parts.\n\nOverall, the Smart Vacuum is a game-changer in the world of cleaning. It’s smart, efficient, and easy to use. Say goodbye to heavy vacuums and hello to a smarter way of cleaning with the Smart Vacuum.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product Name",
+                "type": "text",
+                "min": 2,
+                "max": 120
+            },
+            {
+                "id": "productshortdescription",
+                "label": "Product Short Description",
+                "type": "text",
+                "min": 2,
+                "max": 300
+            },
+            {
+                "id": "blogtitle",
+                "label": "Blog Post Title",
+                "type": "text",
+                "min": 2,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 22,
+        "icon": "email",
+        "color": "#7CFC00",
+        "title": "Email to Promote a Sale",
+        "description": "Write an email to promote a sale of a product.",
+        "category": "generation,email,sales,product",
+        "max_tokens": 500,
+        "temperature": 0.5,
+        "prompt": "Write an email to promote a sale of a product. Product: {product}.\nSale: {sale}.\nSender: {sender}\n\n",
+        "response": "Dear Valued Customers,\n\nHave you been looking for the perfect portable wireless charger? Then you're in luck! We are having a 20% off sale on all of our portable wireless chargers.\n\nOur portable wireless chargers are the perfect accessory for anyone who needs to stay connected on the go. Whether you're stuck in an airport or working late at the office, you can keep your devices charged with ease. Plus, they are lightweight and compact, so you can take them anywhere without worrying about extra baggage.\n\nDon't miss out on this amazing sale! Visit our website today to get your portable wireless charger and take advantage of the 20% savings.\n\nWe look forward to providing you with the best accessories for your wireless needs.\n\nSincerely,\n\n[Your Name]",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product Name",
+                "type": "text",
+                "min": 2,
+                "max": 120
+            },
+            {
+                "id": "sale",
+                "label": "Sale",
+                "type": "text",
+                "min": 2,
+                "max": 400
+            },
+            {
+                "id": "sender",
+                "label": "Sender",
+                "type": "text",
+                "min": 2,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 23,
+        "icon": "bag",
+        "color": "#66CDAA",
+        "title": "Social Media Post for a Fashion Product",
+        "description": "Write a social media post to promote a new fashion product.",
+        "category": "generation,social-media,product",
+        "temperature": 0.6,
+        "prompt": "Write a social media post to promote a new fashion product. Product: {product}.\n\n",
+        "response": "Upgrade your everyday look with The Classic Tote! This versatile leather tote is perfect for work, weekend errands, and everything in between. With its spacious interior and high-quality leather construction, it's sure to become your new go-to bag. Get yours now at our website! #ClassicTote #LeatherBag #Fashion",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product Name",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 24,
+        "icon": "instagram",
+        "color": "#34495E",
+        "title": "Instagram Hashtag Generator",
+        "description": "Generate a list of relevant hashtags to use in your Instagram posts.",
+        "category": "generation,instagram,social-media",
+        "max_tokens": 50,
+        "temperature": 0.5,
+        "prompt": "Generate a list of relevant hashtags to use in your Instagram posts. Topic: {topic}.\n\n",
+        "response": "#fitness #gym #workout #fit #fitfam #health #healthy #exercise #fitspo #motivation",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 25,
+        "icon": "pen",
+        "color": "#F7DC6F",
+        "title": "Blog Post Title Generator",
+        "description": "Generate an attention-grabbing title for a blog post.",
+        "category": "generation,blog",
+        "max_tokens": 50,
+        "temperature": 0.5,
+        "prompt": "Generate an attention-grabbing title for a blog post. Topic: {topic}.\n\n",
+        "response": "Mastering Time Management: Proven Strategies for Increased Productivity",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 26,
+        "icon": "pen",
+        "color": "#9A12B3",
+        "title": "Blog Post Introduction Generator",
+        "description": "Generate an engaging introduction for a blog post.",
+        "category": "generation,blog",
+        "max_tokens": 150,
+        "temperature": 0.7,
+        "prompt": "Generate an engaging introduction for a blog post. Topic: {topic}.\n\n",
+        "response": "Meditation has been around for centuries, but it's only recently that its benefits have been widely recognized. From reducing stress to improving focus and overall well-being, meditation is a powerful tool that can help us navigate the fast-paced world we live in. In this post, we'll explore the many benefits of meditation and show you how to get started.",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 27,
+        "icon": "pen",
+        "color": "#2ECC71",
+        "title": "Blog Post Conclusion Generator",
+        "description": "Generate a conclusion for a blog post.",
+        "category": "generation,blog",
+        "max_tokens": 150,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a conclusion for a blog post about {topic}.\n\n",
+        "response": "In conclusion, incorporating organic foods into your diet can have numerous benefits for your health, the environment, and the farmers who grow our food. So next time you're at the grocery store, consider reaching for the organic option.",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 28,
+        "icon": "pen",
+        "color": "#3498DB",
+        "title": "WordPress Blog Post Title Generator",
+        "description": "Generate a catchy and attention-grabbing title for a WordPress blog post.",
+        "category": "generation,blog,wordpress",
+        "max_tokens": 50,
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a catchy and attention-grabbing title for a WordPress blog post about {topic}.\n\n",
+        "response": "Revolutionize Your Social Media Marketing: Proven Strategies to Boost Your Online Presence",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 29,
+        "icon": "pen",
+        "color": "#F1C40F",
+        "title": "WordPress Blog Post Introduction Generator",
+        "description": "Generate an engaging introduction for a WordPress blog post.",
+        "category": "generation,blog,wordpress",
+        "max_tokens": 150,
+        "temperature": 0.8,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.05,
+        "prompt": "Generate an engaging introduction for a WordPress blog post about {topic}.\n\n",
+        "response": "Email marketing has always been a powerful tool for reaching out to potential customers and keeping existing ones engaged. But with the constant changes in consumer behavior and technology, it can be hard to know how to make your emails stand out. In this post, we'll share some proven strategies and best practices for creating effective email marketing campaigns that drive results.",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 30,
+        "icon": "pen",
+        "color": "#E67E22",
+        "title": "Social Media Post Generator",
+        "description": "Generate a catchy and engaging social media post for a new product launch.",
+        "category": "generation,social-media,marketing",
+        "max_tokens": 140,
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.05,
+        "prompt": "Generate a social media post for a new product launch. Product: {product}. Company: {companyname}.\n\n",
+        "response": "Get ready to stay hydrated in style! Introducing our new Eco-Friendly Water Bottle - perfect for on-the-go, outdoors, and for making a statement. Made with recycled materials, it is good for you and the planet. #EcoFriendly #StayHydrated #SustainableLiving",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            },
+            {
+                "id": "companyname",
+                "label": "Company Name",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 31,
+        "icon": "pen",
+        "color": "#27AE60",
+        "title": "Social Media Caption Generator",
+        "description": "Generate a catchy and engaging caption for a social media post",
+        "category": "generation,social-media,marketing",
+        "max_tokens": 30,
+        "temperature": 1,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a caption for a social media post about {topic}.\n\n",
+        "response": "Savor the flavor at our new restaurant! #newrestaurant #foodie #yum",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 32,
+        "icon": "list",
+        "color": "#7F8C8D",
+        "title": "E-commerce Product Listing Generator",
+        "description": "Generate a product listing for an e-commerce website.",
+        "category": "generation,product,ecommerce",
+        "max_tokens": 200,
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a product listing for an e-commerce website. Product: {product}.\n\n",
+        "response": "Stay connected on the go with this sleek Smartwatch. With a touch screen display and customizable watch faces, it's easy to stay on top of notifications, fitness tracking, and more. The long-lasting battery and water-resistant design make it the perfect companion for your busy life.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 33,
+        "icon": "cart",
+        "color": "#E74C3C",
+        "title": "E-commerce Product Description Generator",
+        "description": "Generate a detailed product description for an e-commerce website.",
+        "category": "generation,product,ecommerce",
+        "max_tokens": 500,
+        "temperature": 0.9,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.2,
+        "prompt": "Generate a detailed product description for an e-commerce website. Product: {product}.\n\n",
+        "response": "Introducing the Electric Bike, the perfect solution for your daily commute or weekend adventures. With a top speed of 20 mph and a range of up to 50 miles on a single charge, this bike will take you where you need to go. The lightweight aluminum frame and comfortable seat make it easy to ride, while the front suspension and rear disc brakes provide a smooth and safe ride. The bike also features a convenient LCD display that shows your speed, battery level, and more. Whether you're running errands or exploring the city, this electric bike is sure to turn heads.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 34,
+        "icon": "search",
+        "color": "#1ABC9C",
+        "title": "SEO Title Generator",
+        "description": "Generate an SEO friendly title for a website page.",
+        "category": "generation,seo,blog",
+        "max_tokens": 60,
+        "temperature": 0.7,
+        "prompt": "Generate an SEO friendly title for a website page. Page: {page}.\n\n",
+        "response": "Yoga Classes: Find Inner Peace and Improve Flexibility - [Yoga Studio Name]",
+        "fields": [
+            {
+                "id": "page",
+                "label": "Page",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 35,
+        "icon": "question",
+        "color": "#FFA07A",
+        "title": "Question & Answer",
+        "description": "Answer questions based on existing knowledge.",
+        "category": "answers,generation,conversation",
+        "stop": [
+            "\n"
+        ],
+        "prompt": "I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. If you ask me a question that is nonsense, trickery, or has no clear answer, I will respond with \"Unknown\".\n\nQ: {question}\nA:",
+        "response": "Human life expectancy in the United States is 78 years.",
+        "fields": [
+            {
+                "id": "question",
+                "label": "Question",
+                "type": "text",
+                "min": 2,
+                "max": 240
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 36,
+        "icon": "grammar",
+        "color": "#DDA0DD",
+        "title": "Grammar correction",
+        "description": "Corrects sentences into standard English.",
+        "category": "transformation,generation",
+        "max_tokens": 500,
+        "prompt": "Correct this to standard English:\n\n{textinput}.",
+        "response": "She did not go to the market.",
+        "fields": [
+            {
+                "id": "textinput",
+                "label": "Text",
+                "type": "text",
+                "min": 2,
+                "max": 500
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 37,
+        "icon": "grade",
+        "color": "#ADD8E6",
+        "title": "Summarize for a 2nd grader",
+        "description": "Translates difficult text into simpler concepts.",
+        "category": "transformation,generation",
+        "max_tokens": 700,
+        "temperature": 0.7,
+        "prompt": "Summarize this for a second-grade student:\n\n{textinput}.",
+        "response": "Jupiter is the fifth planet from the Sun and is very big and bright. It can be seen with our eyes in the night sky and it has been known since ancient times. Its name comes from the Roman god Jupiter. It is usually the third brightest object in the night sky after the Moon and Venus.",
+        "fields": [
+            {
+                "id": "textinput",
+                "label": "Text",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 38,
+        "icon": "translate",
+        "color": "#90EE90",
+        "title": "English to other languages",
+        "description": "Translates English text into French, Spanish and Japanese.",
+        "category": "transformation,generation,translation",
+        "max_tokens": 700,
+        "temperature": 0.3,
+        "prompt": "Translate this into {language}:\n\n{textinput}\n\n",
+        "response": "Quels sont les chambres que vous avez disponibles?\n2. ¿Qué habitaciones tienes disponibles?\n3. どの部屋が利用可能ですか",
+        "fields": [
+            {
+                "id": "language",
+                "label": "Language",
+                "type": "text",
+                "min": 2,
+                "max": 200
+            },
+            {
+                "id": "textinput",
+                "label": "Text",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 39,
+        "icon": "table",
+        "color": "#FFB6C1",
+        "title": "Parse Unstructured Data",
+        "description": "Create tables from long form text by specifying a structure and supplying some examples.",
+        "category": "transformation,generation",
+        "prompt": "Parse unstructured data with given structure. Data: {textinput}\n\nStructure: {structure}\n\n",
+        "response": "| Neoskizzles | Purple | Candy |\n| Loheckles | Grayish Blue | Tart, like a lemon |\n| Pounits | Bright Green | Savory |\n| Loopnovas | Neon Pink | Cotton Candy |\n| Glowls | Pale Orange | Sour and Bitter, Acidic and Caustic |",
+        "fields": [
+            {
+                "id": "textinput",
+                "label": "Data",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            },
+            {
+                "id": "structure",
+                "label": "Structure",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 40,
+        "icon": "folder",
+        "color": "#87CEFA",
+        "title": "Classification",
+        "description": "Classify items into categories via example.",
+        "category": "classification",
+        "max_tokens": 64,
+        "prompt": "The following is a list of {list} and the categories they fall into:\n\n{textinput}\nCategory:",
+        "response": "Technology\n\nFacebook\nCategory: Social Media\n\nFedex\nCategory: Delivery",
+        "fields": [
+            {
+                "id": "list",
+                "label": "List Type",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            },
+            {
+                "id": "textinput",
+                "label": "Items",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 41,
+        "icon": "emoji",
+        "color": "#FFC0CB",
+        "title": "Movie to Emoji",
+        "description": "Convert movie titles into emoji.",
+        "category": "transformation,generation",
+        "max_tokens": 60,
+        "temperature": 0.8,
+        "stop": [
+            "\n"
+        ],
+        "prompt": "Convert movie titles into emoji.\n\n{textinput}",
+        "response": "⭐️⚔",
+        "fields": [
+            {
+                "id": "textinput",
+                "label": "Movie Title",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 42,
+        "icon": "twitter",
+        "color": "#98FB98",
+        "title": "Advanced Tweet Classifier",
+        "description": "This is an advanced prompt for detecting sentiment. It allows you to provide it with a list of status updates and then provide a sentiment for each one.",
+        "category": "classification",
+        "max_tokens": 60,
+        "prompt": "Status updates:\n\n{textinput}\n\nSentiment:",
+        "response": "Negative",
+        "fields": [
+            {
+                "id": "textinput",
+                "label": "Status Update",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 43,
+        "icon": "key",
+        "color": "#AFEEEE",
+        "title": "Keywords",
+        "description": "Extract keywords from a block of text. At a lower temperature it picks keywords from the text.",
+        "category": "classification,transformation,keyword",
+        "max_tokens": 60,
+        "temperature": 0.5,
+        "frequency_penalty": 0.8,
+        "prompt": "Extract keywords from this text:\n\n{textinput}\n\n",
+        "response": "Keywords: Black-on-black ware, 20th century, 21st century, Puebloan Native American ceramic artists, Northern New Mexico, reduction-fired blackware, pueblo artists, selective burnishing, refractory slip, carving/incising designs, polishing",
+        "fields": [
+            {
+                "id": "textinput",
+                "label": "Text",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 44,
+        "icon": "factual",
+        "color": "#F0E68C",
+        "title": "Factual answering",
+        "description": "Guide the model towards factual answering by showing it how to respond to questions that fall outside its knowledge base.",
+        "category": "answers,classification,conversation,generation",
+        "max_tokens": 60,
+        "prompt": "Q: Who is Batman?\nA: Batman is a fictional comic book character.\n\nQ: What is torsalplexity?\nA: ?\n\nQ: What is Devz9?\nA: ?\n\nQ: Who is George Lucas?\nA: George Lucas is American film director and producer famous for creating Star Wars.\n\nQ: What is the capital of California?\nA: Sacramento.\n\nQ: What orbits the Earth?\nA: The Moon.\n\nQ: Who is Fred Rickerson?\nA: ?\n\nQ: What is an atom?\nA: An atom is a tiny particle that makes up everything.\n\nQ: Who is Alvan Muntz?\nA: ?\n\nQ: What is Kozar-09?\nA: ?\n\nQ: How many moons does Mars have?\nA: Two, Phobos and Deimos.\n\nQ: {textinput}\nA:",
+        "response": "A language model is a type of artificial intelligence that uses statistical techniques to predict the probability of a sequence of words.",
+        "fields": [
+            {
+                "id": "textinput",
+                "label": "Question",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 45,
+        "icon": "adv",
+        "color": "#00FF7F",
+        "title": "Ad from product description",
+        "description": "Turn a product description into ad copy.",
+        "category": "generation",
+        "temperature": 0.5,
+        "prompt": "Write a {adtype} ad for the following product to run on {platform} aimed at {aimedat}:\n\nProduct Descrtiption: {productshortdescription}\n\n",
+        "response": "Are you looking for a way to give your child a head start in school? Look no further than Learning Room! Our virtual environment is designed to help students from kindergarten to high school excel in their studies. Our unique platform offers personalized learning plans, interactive activities, and real-time feedback to ensure your child is getting the most out of their education. Give your child the best chance to succeed in school with Learning Room!",
+        "fields": [
+            {
+                "id": "adtype",
+                "label": "Type",
+                "type": "select",
+                "options": [
+                    "Creative",
+                    "Catchy",
+                    "Funny",
+                    "Informative",
+                    "Emotional",
+                    "Inspirational",
+                    "Motivational",
+                    "Persuasive",
+                    "Engaging",
+                    "Entertaining"
+                ]
+            },
+            {
+                "id": "platform",
+                "label": "Platform",
+                "type": "select",
+                "options": [
+                    "Facebook",
+                    "Instagram",
+                    "Twitter",
+                    "Snapchat",
+                    "Pinterest",
+                    "Reddit",
+                    "TikTok",
+                    "YouTube",
+                    "Twitch",
+                    "LinkedIn"
+                ]
+            },
+            {
+                "id": "aimedat",
+                "label": "Aimed At",
+                "type": "select",
+                "options": [
+                    "Parents",
+                    "Young Adults",
+                    "Adults",
+                    "Elderly"
+                ]
+            },
+            {
+                "id": "productshortdescription",
+                "label": "Product Description",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 46,
+        "icon": "product",
+        "color": "#F08080",
+        "title": "Product Name Generator",
+        "description": "Create product names from examples words. Influenced by a community prompt.",
+        "category": "generation",
+        "max_tokens": 60,
+        "temperature": 0.8,
+        "prompt": "Product description: A home milkshake maker\nSeed words: fast, healthy, compact.\nProduct names: HomeShaker, Fit Shaker, QuickShake, Shake Maker\n\nProduct description: A pair of shoes that can fit any foot size.\nSeed words: adaptable, fit, omni-fit. Product description: {productdescription}\nSeed words: {seedwords}\nProduct names:",
+        "response": "Product names: AdaptFit, OmniSecure, Fit-All, AdaptShoes.",
+        "fields": [
+            {
+                "id": "productdescription",
+                "label": "Product Description",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            },
+            {
+                "id": "seedwords",
+                "label": "Seed Words",
+                "type": "text",
+                "min": 2,
+                "max": 300
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 47,
+        "icon": "pen",
+        "color": "#FFD700",
+        "title": "TL;DR summarization",
+        "description": "Summarize text by adding a 'tl;dr:' to the end of a text passage.",
+        "category": "generation,transformation,summarization",
+        "max_tokens": 500,
+        "temperature": 0.7,
+        "frequency_penalty": 1,
+        "prompt": "{textinput}\n\nTl;dr",
+        "response": "Neutron stars are the collapsed cores of massive supergiant stars, with a radius of around 10 kilometres and a mass of 1.4 solar masses. They are formed from the supernova explosion of a massive star combined with gravitational collapse, compressing the core beyond white dwarf star density.",
+        "fields": [
+            {
+                "id": "textinput",
+                "label": "Text",
+                "type": "text",
+                "min": 2,
+                "max": 700
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 48,
+        "icon": "excel",
+        "color": "#87CEEB",
+        "title": "Spreadsheet Creator",
+        "description": "Create spreadsheets of various kinds of data. It's a long prompt but very versatile.",
+        "category": "generation",
+        "max_tokens": 60,
+        "temperature": 0.5,
+        "prompt": "A two-column spreadsheet about {topic}.\n{column1} | {column2}\n\n",
+        "response": "Alien | 1979\nBlade Runner | 1982\nThe Terminator | 1984\nThe Matrix | 1999\nAvatar | 2009\nInterstellar | 2014\nEx Machina | 2015\nArrival | 2016\nReady Player One | 2018",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 300
+            },
+            {
+                "id": "column1",
+                "label": "Column 1",
+                "type": "text",
+                "min": 1,
+                "max": 50
+            },
+            {
+                "id": "column2",
+                "label": "Column 2",
+                "type": "text",
+                "min": 1,
+                "max": 50
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 49,
+        "icon": "book",
+        "color": "#FFA500",
+        "title": "Book List Maker",
+        "description": "This makes a list of books and stops when it reaches #10.",
+        "category": "generation",
+        "max_tokens": 200,
+        "temperature": 0.5,
+        "frequency_penalty": 0.52,
+        "presence_penalty": 0.5,
+        "stop": [
+            "11."
+        ],
+        "prompt": "List 10 {bookgenre} books:",
+        "response": "1. 1984 by George Orwell\n2. The War of the Worlds by H.G. Wells\n3. Dune by Frank Herbert\n4. Frankenstein by Mary Shelley\n5. Ender's Game by Orson Scott Card\n6. The Hitchhiker's Guide to the Galaxy by Douglas Adams\n7. The Martian Chronicles by Ray Bradbury\n8. Brave New World by Aldous Huxley\n9. Do Androids Dream of Electric Sheep? By Philip K Dick\n10. I, Robot by Isaac Asimov",
+        "fields": [
+            {
+                "id": "bookgenre",
+                "label": "Book Genre",
+                "type": "select",
+                "options": [
+                    "Science Fiction",
+                    "Fantasy",
+                    "Romance",
+                    "Mystery",
+                    "Horror",
+                    "Thriller",
+                    "Nonfiction",
+                    "Biography",
+                    "Autobiography",
+                    "History",
+                    "Poetry",
+                    "Self-Help",
+                    "Religion",
+                    "Spirituality",
+                    "Cookbook"
+                ]
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 50,
+        "icon": "twitter",
+        "color": "#4682B4",
+        "title": "Tweet classifier",
+        "description": "This is a basic prompt for detecting sentiment.",
+        "category": "classification",
+        "max_tokens": 60,
+        "frequency_penalty": 0.5,
+        "prompt": "Decide whether a Tweet's sentiment is positive, neutral, or negative.\n\nTweet: \"{tweet}\"\nSentiment:",
+        "response": "Positive",
+        "fields": [
+            {
+                "id": "tweet",
+                "label": "Tweet",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 51,
+        "icon": "airport",
+        "color": "#D3D3D3",
+        "title": "Airport code extractor",
+        "description": "A simple prompt for extracting airport codes from text.",
+        "category": "transformation,generation",
+        "max_tokens": 60,
+        "stop": [
+            "\n"
+        ],
+        "prompt": "Extract the airport codes from this text:\n\nText: \"I want to fly from Los Angeles to Miami.\"\nAirport codes: LAX, MIA\n\nText: \"{text}\"\nAirport codes:",
+        "response": "MCO, BOS",
+        "fields": [
+            {
+                "id": "text",
+                "label": "Text",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 52,
+        "icon": "contact",
+        "color": "#FF4500",
+        "title": "Extract contact information",
+        "description": "Extract contact information from a block of text.",
+        "category": "transformation,generation",
+        "max_tokens": 64,
+        "prompt": "Extract the name and mailing address from this text: {text}\n\n",
+        "response": "Maya\nMailing Address: 2111 Ash Lane, Crestview CA 92002",
+        "fields": [
+            {
+                "id": "text",
+                "label": "Text",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 53,
+        "icon": "emoji",
+        "color": "#DA70D6",
+        "title": "Mood to Color",
+        "description": "Turn a text description into a color.",
+        "category": "transformation,generation",
+        "max_tokens": 64,
+        "stop": [
+            ";"
+        ],
+        "prompt": "The CSS code for a color like {text}:\n\nbackground-color:",
+        "response": "3A5F9F",
+        "fields": [
+            {
+                "id": "text",
+                "label": "Mood",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 54,
+        "icon": "analogy",
+        "color": "#FF00FF",
+        "title": "Analogy Maker",
+        "description": "Create analogies. Modified from a community prompt to require fewer examples.",
+        "category": "generation",
+        "max_tokens": 60,
+        "temperature": 0.5,
+        "prompt": "Create an analogy for this phrase:\n\n{text}:",
+        "response": "Questions are like arrows in that they both have the power to pierce through the surface and uncover the truth that lies beneath.",
+        "fields": [
+            {
+                "id": "text",
+                "label": "Phrase",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 55,
+        "icon": "movie",
+        "color": "#FFDAB9",
+        "title": "Short Story Creator",
+        "description": "Creates two to three sentence short stories from a topic input.",
+        "category": "transformation,generation,translation",
+        "max_tokens": 60,
+        "temperature": 0.8,
+        "frequency_penalty": 0.5,
+        "prompt": "Topic: Breakfast\nTwo-Sentence Short Story: He always stops crying when I pour the milk on his cereal. I just have to remember not to let him see his face on the carton.\n\nTopic: {topic}\nTwo-Sentence Short Story:",
+        "response": "The wind howled through the night, shaking the windows of the house with a sinister force. As I stepped outside, I could feel it calling out to me, beckoning me to follow its chilling path.",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 56,
+        "icon": "person",
+        "color": "#B0C4DE",
+        "title": "Third-person Converter",
+        "description": "Converts first-person POV to the third-person. This is modified from a community prompt to use fewer examples.",
+        "category": "transformation,generation,translation",
+        "max_tokens": 60,
+        "prompt": "Convert this from first-person to third person:\n\n{text}\n\n",
+        "response": "She decided to make a movie about Ada Lovelace.",
+        "fields": [
+            {
+                "id": "text",
+                "label": "Text",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 57,
+        "icon": "notes",
+        "color": "#E2C08D",
+        "title": "Notes to Summary",
+        "description": "Turn meeting notes into a summary.",
+        "category": "transformation,generation,summarization",
+        "max_tokens": 700,
+        "prompt": "Convert my short hand into a first-hand account of the meeting:\n\n{notes}\n\n",
+        "response": "At the meeting, Tom reported that profits had increased by 50%. Jane then mentioned that the new servers were online. Kjel mentioned that they needed more time to fix the software, and Jane offered to help. Finally, Parkman reported that the beta testing was almost done.",
+        "fields": [
+            {
+                "id": "notes",
+                "label": "Meeting Notes",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 58,
+        "icon": "idea",
+        "color": "#9BDBFB",
+        "title": "Business Idea Generator",
+        "description": "Create ideas for business.",
+        "category": "generation",
+        "max_tokens": 150,
+        "temperature": 0.6,
+        "frequency_penalty": 1,
+        "presence_penalty": 1,
+        "prompt": "Brainstorm some ideas about {topic}:\n\n",
+        "response": "1. Virtual reality-based fitness classes\n2. Home workout programs using virtual reality technology\n3. Interactive video game-style workouts with a virtual trainer\n4. Virtual running races against other players in VR worlds\n5. Immersive yoga and Pilates sessions set in exotic locations\n6. Sports simulations involving simulated physical activity within the VR world\n7. Group fitness challenges that involve competing against opponents in a virtual environment\n8. Adaptive exercise programs tailored to individual’s goals or health conditions",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 59,
+        "icon": "blog",
+        "color": "#953313",
+        "title": "Essay Outline",
+        "description": "Generate an outline for a research topic.",
+        "category": "generation",
+        "max_tokens": 500,
+        "temperature": 0.3,
+        "prompt": "Create an outline for an essay about {topic}:\n\n",
+        "response": "I. Introduction\nA. Who was Nikola Tesla?\nB. Overview of his contributions to technology\n\nII. Early Life and Education\nA. Where and when Tesla was born\nB. His education and early career\n\nIII. Tesla's Contributions to Technology\nA. Alternating Current\nB. Radio and Remote Control\nC. Robotics\nD. X-Rays\n\nIV. Tesla's Later Years\nA. His later inventions\nB. His death and legacy\n\nV. Conclusion\nA. Summary of Tesla's life and accomplishments\nB. Impact of Tesla's work on modern technology",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Research Topic",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 60,
+        "icon": "food",
+        "color": "#A074C4",
+        "title": "Recipe Creator",
+        "description": "Create a recipe from a list of ingredients.",
+        "category": "generation,food",
+        "max_tokens": 700,
+        "temperature": 0.3,
+        "prompt": "Write a recipe based on these ingredients:\n\n{ingredients}\n\n",
+        "response": "1. Preheat oven to 350 degrees F.\n2. Spread a layer of Fritos in the bottom of a 9x13 inch baking dish.\n3. Top the Fritos with a layer of chili.\n4. Sprinkle the chili with shredded cheddar cheese.\n5. Sprinkle the cheese with diced onions.\n6. Bake in preheated oven for 25 minutes.\n7. Remove from oven and top with a dollop of sour cream.\n8. Serve warm. Enjoy!",
+        "fields": [
+            {
+                "id": "ingredients",
+                "label": "Ingredients",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 61,
+        "icon": "road",
+        "color": "#DD5BE1",
+        "title": "Turn by Turn Directions",
+        "description": "Convert natural language to turn-by-turn directions.",
+        "category": "generation,transformation",
+        "max_tokens": 64,
+        "temperature": 0.3,
+        "prompt": "Create a numbered list of turn-by-turn directions from this text: \n\n{text}\n\n",
+        "response": "1. Go south on 95\n2. Take Sunrise Boulevard east\n3. Head south on US 1\n4. Tom Jenkins BBQ will be on the left after several miles",
+        "fields": [
+            {
+                "id": "text",
+                "label": "Text",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 62,
+        "icon": "drink",
+        "color": "#7C41DD",
+        "title": "Restaurant Review Creator",
+        "description": "Turn a few words into a restaurant review.",
+        "category": "generation,food",
+        "max_tokens": 300,
+        "temperature": 0.5,
+        "prompt": "Write a restaurant review based on these notes:\n\n{notes}\n\nReview:",
+        "response": "I recently visited The Blue Wharf and had a wonderful experience. The lobster was excellent and the prices were very good. The only downside was the noise level, but the polite service more than made up for it. Highly recommend!",
+        "fields": [
+            {
+                "id": "notes",
+                "label": "Notes",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 63,
+        "icon": "study",
+        "color": "#EF434C",
+        "title": "Create Study Notes",
+        "description": "Provide a topic and get study notes.",
+        "category": "generation",
+        "max_tokens": 300,
+        "temperature": 0.3,
+        "prompt": "Topic: {topic}\n\n",
+        "response": "1. Understand the Roman Republic and its political and social structures.\n2. Learn about the major events and people of the Roman Empire, including the Pax Romana.\n3. Familiarize yourself with Roman culture and society, including language, art, architecture, literature, law, and religion.\n4. Study the Roman military, its tactics and organization, and its effects on the empire.\n5. Examine the decline of the Roman Empire, its eventual fall, and its legacy.",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 64,
+        "icon": "interview",
+        "color": "#21B68B",
+        "title": "Interview Questions",
+        "description": "Create interview questions.",
+        "category": "generation",
+        "max_tokens": 300,
+        "temperature": 0.5,
+        "prompt": "Create a list of {questions} questions for my interview about {topic}.\n\n",
+        "response": "1. What inspired you to write science fiction?\n2. What themes do you typically explore in your work?\n3. How has the genre of science fiction evolved over time?\n4. What do you think sets your work apart from other science fiction authors?\n5. What advice would you give to aspiring science fiction authors?\n6. What are some of the most challenging aspects of writing science fiction?\n7. How has your writing process changed over the years?\n8. What do you think is the most important thing for readers to take away from your work?",
+        "fields": [
+            {
+                "id": "questions",
+                "label": "Number of Questions",
+                "type": "select",
+                "options": [
+                    "3",
+                    "5",
+                    "8",
+                    "10"
+                ]
+            },
+            {
+                "id": "topic",
+                "label": "Interview Topic",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 65,
+        "icon": "star",
+        "color": "#10FFB0",
+        "title": "Product Review",
+        "description": "Write a product review.",
+        "category": "generation,product,review",
+        "max_tokens": 300,
+        "temperature": 0.8,
+        "prompt": "Write a product review for {product}\n\n",
+        "response": "I recently purchased the Smartwatch Pro and I have to say, it's a game-changer in the world of smartwatches. The fitness tracking features are top-notch and provide detailed metrics for a variety of exercises. It also includes a heart rate monitor, sleep tracking, and even stress tracking. The mobile payment capabilities make it easy to make transactions on the go.\n\nThe design of the watch is sleek and modern, and the AMOLED display is bright and vibrant. The battery life is impressive and lasts for more than a day even with heavy usage.\n\nI love the customization options for the watch face and the ability to download additional apps from the app store. The voice assistant feature is also a nice touch, making it easy to send texts and set reminders without having to pull out my phone.\n\nOverall, the Smartwatch Pro is a fantastic investment for anyone looking for a high-end smartwatch with advanced features. It's well-designed, functional, and packed with features that make it stand out from the competition.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 66,
+        "icon": "cart",
+        "color": "#808000",
+        "title": "WooCommerce Short Description Generator",
+        "description": "Generate a short description for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 200,
+        "temperature": 0.8,
+        "prompt": "Generate a short description for a product. Product: {product}\n\n",
+        "response": "Experience crystal-clear sound with these Wireless Headphones. Connect to your device in seconds and enjoy up to 10 hours of wireless listening with a comfortable, adjustable fit. With touch controls and a noise-cancelling microphone, these headphones provide an immersive audio experience.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 67,
+        "icon": "cart",
+        "color": "#FF69B4",
+        "title": "WooCommerce Long Description Generator",
+        "description": "Generate long description for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 500,
+        "temperature": 0.8,
+        "prompt": "Generate a long description for a product. Product: {product}\n\n",
+        "response": "The KitchenAid Stand Mixer is a must-have for any kitchen. With 10 speeds and a powerful 325-watt motor, it can handle a variety of ingredients with ease. The tilt-head design makes it easy to add ingredients and change attachments. Plus, the included attachments make it easy to mix, knead, and whip ingredients. The stainless steel bowl is dishwasher safe and large enough to hold up to 5 quarts of ingredients.\n\nThe KitchenAid Stand Mixer is available in a variety of colors to match any kitchen decor. It's also backed by a 1-year warranty, so you can purchase with confidence.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 68,
+        "icon": "food",
+        "color": "#556B2F",
+        "title": "Recipe using a new food product",
+        "description": "Create a recipe using a new food product.",
+        "category": "generation,product,food",
+        "max_tokens": 200,
+        "temperature": 0.7,
+        "prompt": "Create a recipe using a new food product. Product: {product}\n\n",
+        "response": "Vegan Protein Power Pancakes\n\nIngredients:\n\n-1/2 cup all-purpose flour\n3 tablespoons vegan protein powder\n-2 tablespoons granulated sugar\n-1 teaspoon baking powder\n-1/4 teaspoon baking soda\n-1/4 teaspoon ground cinnamon\n-1/2 cup almond milk\n-2 tablespoons vegetable oil\n-1 teaspoon vanilla extract\n-1/2 banana, mashed\n\nInstructions:\n\n1. In a medium bowl, whisk together the flour, protein powder, sugar, baking powder, baking soda, and cinnamon.\n\n2. In a separate bowl, whisk together the almond milk, vegetable oil, vanilla extract, and mashed banana.\n\n3. Pour the wet ingredients into the dry ingredients and mix until just combined. Do not overmix.\n\n4. Heat a lightly greased griddle or pan over medium heat.\n\n5. Scoop 1/4 cup of the batter onto the prepared griddle and cook for about 2 minutes, until the edges start to brown. Flip and cook for another 2 minutes, or until golden brown.\n\n6. Serve warm with your favorite toppings. Enjoy!",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 69,
+        "icon": "cart",
+        "color": "#6495ED",
+        "title": "WooCommerce Product Bundle Generator",
+        "description": "Generate a product bundle for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 200,
+        "temperature": 0.5,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.05,
+        "prompt": "Generate a product bundle for a product. Product: {product}\n\n",
+        "response": "Maximize your fitness journey with our Fitness Tracker bundle. It includes a high-quality fitness tracker, a comfortable wristband, and a charger. The fitness tracker tracks your steps, calories, and sleep. It also has a heart rate monitor and a long battery life. The bundle is perfect for anyone who wants to stay active and healthy.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 70,
+        "icon": "cart",
+        "color": "#00FFFF",
+        "title": "WooCommerce Product Attribute Generator",
+        "description": "Generate a product attribute for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 150,
+        "temperature": 0.5,
+        "frequency_penalty": 0.1,
+        "prompt": "Generate a product attribute for a product. Product: {product}\n\n",
+        "response": "Our water bottle is made of BPA-free, durable materials and can hold up to 24 ounces of liquid. It features a leak-proof design and a convenient carry handle, making it perfect for on-the-go hydration.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 71,
+        "icon": "cart",
+        "color": "#DC143C",
+        "title": "WooCommerce Product Specification Generator",
+        "description": "Generate product specifications for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 200,
+        "temperature": 0.6,
+        "frequency_penalty": 0.15,
+        "presence_penalty": 0.1,
+        "prompt": "Generate product specifications for a product. Product: {product}\n\n",
+        "response": "Our Smart Watch features a 1.3-inch touch screen display, a heart rate monitor, and can track steps, calories burned, and sleep. It also has a 5-day battery life and is water resistant. It is compatible with both iOS and Android and includes features such as message and call notifications, music control and mobile payments.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 72,
+        "icon": "cart",
+        "color": "#DAA520",
+        "title": "WooCommerce Product Benefit Generator",
+        "description": "Generate the benefits of a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 150,
+        "temperature": 0.8,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0,
+        "prompt": "Generate the benefits of a product. Product: {product}\n\n",
+        "response": "Our yoga mat offers superior grip and cushioning for comfortable and stable yoga practice. It is made with eco-friendly materials and is easy to clean. It also includes a carrying strap for easy transport to and from the studio or gym.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 73,
+        "icon": "cart",
+        "color": "#B22222",
+        "title": "WooCommerce Product Keyword Generator",
+        "description": "Generate keywords for a WooCommerce product.",
+        "category": "generation,product,woocommerce,keyword",
+        "max_tokens": 100,
+        "temperature": 0.5,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.1,
+        "prompt": "Generate keywords for a product. Product: {product}\n\n",
+        "response": "Electric toothbrush, toothbrush, oral care, oral hygiene, clean teeth, dental health, gum health, plaque removal, sonic technology, rechargeable toothbrush",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 74,
+        "icon": "cart",
+        "color": "#00FF00",
+        "title": "WooCommerce Product Tagline Generator",
+        "description": "Generate a catchy tagline for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 50,
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a {type} tagline for a product. Product: {product}\n\n",
+        "response": "Power on the go with our Portable Charger.",
+        "fields": [
+            {
+                "id": "type",
+                "label": "Tagline Type",
+                "type": "select",
+                "options": [
+                    "Catchy",
+                    "Creative",
+                    "Engaging"
+                ]
+            },
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 75,
+        "icon": "cart",
+        "color": "#FF00FF",
+        "title": "WooCommerce Product Testimonial Generator",
+        "description": "Generate a customer testimonial for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 150,
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a customer testimonial for a product. Product: {product}\n\n",
+        "response": "I've been using the yoga mat for a few months now and it has completely transformed my practice. The grip is amazing and it's thick enough to provide the perfect amount of cushioning. I highly recommend it to anyone looking for a high-quality yoga mat.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 76,
+        "icon": "facebook",
+        "color": "#800080",
+        "title": "Facebook Event Description Generator",
+        "description": "Generate a detailed description for a Facebook event.",
+        "category": "generation,social-media,facebook",
+        "max_tokens": 500,
+        "temperature": 0.5,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a detailed description for a Facebook event. Event Name: {eventname}\n\n",
+        "response": "Join us for our Virtual Career Fair! Meet with top companies and recruiters from the comfort of your own home. Learn about job opportunities, ask questions and connect with potential employers. You'll have the chance to chat one-on-one with recruiters, attend virtual sessions and workshops, and learn about different industries. Whether you're a recent graduate or a seasoned professional, this event is perfect for anyone looking for a new career opportunity. Register today and take the first step towards your dream job! 💼📅 #virtualcareerfair #jobopportunities",
+        "fields": [
+            {
+                "id": "eventname",
+                "label": "Event Name",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 77,
+        "icon": "facebook",
+        "color": "#696969",
+        "title": "Facebook Group Description Generator",
+        "description": "Generate a detailed and compelling description for a Facebook group.",
+        "category": "generation,social-media,facebook",
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a detailed and compelling description for a Facebook group related to {topic}.\n\n",
+        "response": "Welcome to our gardening community! Here you can share tips, ask questions and connect with other green thumbs. Whether you're a beginner or a seasoned gardener, you'll find valuable information and inspiration. Share pictures of your garden, ask for advice on specific plants and join in on discussions about gardening techniques. Let's learn and grow together!🌻🌷 #gardening #community",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Group Topic",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 78,
+        "icon": "twitter",
+        "color": "#BA4A00",
+        "title": "Twitter Bio Generator",
+        "description": "Generate a unique bio for your Twitter profile.",
+        "category": "generation,twitter,social-media",
+        "max_tokens": 120,
+        "temperature": 0.6,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a unique bio for your Twitter profile. Keywords: {keywords}\n\n",
+        "response": "Social media marketer and entrepreneur. Passionate about helping businesses reach their full potential through creative and effective social media strategies. #marketing #entrepreneur",
+        "fields": [
+            {
+                "id": "keywords",
+                "label": "Keywords",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 79,
+        "icon": "twitter",
+        "color": "#008080",
+        "title": "Engaging Tweet Generator",
+        "description": "Generate an engaging tweet to promote your brand on Twitter.",
+        "category": "generation,twitter,social-media,product",
+        "max_tokens": 280,
+        "temperature": 0.8,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0,
+        "prompt": "Generate an engaging tweet to promote your brand on Twitter. Brand: {brand}\n\n",
+        "response": "Start your day off right with a cup of XYZ Coffee! Our premium blends are crafted with care to give you the perfect pick-me-up. Try it now and taste the difference. #coffee #premium #taste",
+        "fields": [
+            {
+                "id": "brand",
+                "label": "Brand",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 80,
+        "icon": "twitter",
+        "color": "#FF5733",
+        "title": "Twitter Hashtag Generator",
+        "description": "Generate a list of relevant hashtags to use in your tweets.",
+        "category": "generation,twitter,social-media",
+        "max_tokens": 50,
+        "temperature": 0.5,
+        "prompt": "Generate a list of relevant hashtags to use in your tweets. Topic: {topic}\n\n",
+        "response": "#travel #vacation #explore #adventure #wanderlust #travelgram #holiday #traveling #traveler #travelling",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 81,
+        "icon": "twitter",
+        "color": "#1F3A93",
+        "title": "Twitter Retweet Generator",
+        "description": "Generate a tweet that encourages retweets and engagement.",
+        "category": "generation,twitter,social-media",
+        "max_tokens": 280,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a tweet that encourages retweets and engagement. Topic: {topic}\n\n",
+        "response": "Want to win a prize? Retweet this and follow us for a chance to win a gift card to your favorite store! #retweet #giveaway #win",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 82,
+        "icon": "search",
+        "color": "#2C3E50",
+        "title": "SEO Title Tag Generator",
+        "description": "Generate a title tag for a webpage to improve SEO",
+        "category": "generation,seo,blog",
+        "max_tokens": 100,
+        "temperature": 0.7,
+        "presence_penalty": 0.2,
+        "prompt": "Generate a title tag for a webpage about {topic} to improve SEO.\n\n",
+        "response": "SEO Tips for Small Businesses: Boost Your Visibility Online",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 83,
+        "icon": "search",
+        "color": "#8E44AD",
+        "title": "SEO Keyword Research Generator",
+        "description": "Generate a list of keywords for SEO and page ranking.",
+        "category": "generation,seo,keyword,google",
+        "max_tokens": 50,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.3,
+        "prompt": "Generate a list of keywords for an e-commerce website that sells {product}.\n\n",
+        "response": "Handmade soap, natural soap, organic soap, artisan soap, eco-friendly soap, sustainable soap, cruelty-free soap, vegan soap, skincare, body care, aromatherapy, gifts, soap making, soap bars, soap gifts, soap sets",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 84,
+        "icon": "google",
+        "color": "#16A085",
+        "title": "Google Search Query Generator",
+        "description": "Generate a list of potential search queries for a specific topic using Google Autocomplete",
+        "category": "generation,seo,google,keyword",
+        "max_tokens": 200,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.2,
+        "prompt": "Generate a list of potential search queries for a topic about {topic}.\n\n",
+        "response": "best coffee shops New York City, top coffee shops New York City, coffee shops New York City, best coffee New York City, top coffee New York City, coffee New York City, best coffee shops Manhattan, top coffee shops Manhattan, coffee shops Manhattan",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 85,
+        "icon": "google",
+        "color": "#D0021B",
+        "title": "Google Search Suggestions Generator",
+        "description": "Generate search suggestions for a given keyword on Google.",
+        "category": "generation,seo,google,keyword",
+        "temperature": 0.7,
+        "prompt": "Generate search suggestions for the keyword {keyword}.\n\n",
+        "response": "coffee near me, coffee shops, coffee beans, coffee recipes, coffee makers",
+        "fields": [
+            {
+                "id": "keyword",
+                "label": "Keyword",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 86,
+        "icon": "wikipedia",
+        "color": "#FFE4B5",
+        "title": "Wikipedia Article Summarizer",
+        "description": "Generate a concise summary of a Wikipedia article.",
+        "category": "generation,summarization,wikipedia",
+        "max_tokens": 400,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.3,
+        "prompt": "Generate a concise summary of the Wikipedia article about {article}.\n\n",
+        "response": "The history of the internet can be traced back to the 1960s with the development of ARPANET by the US Department of Defense. The early internet was primarily used for research and military communication. However, the introduction of the World Wide Web in the 1990s led to widespread commercialization of the internet and its growth into the global phenomenon it is today. The internet has revolutionized the way people communicate, do business, access information, and more.",
+        "fields": [
+            {
+                "id": "article",
+                "label": "Wikipedia Article",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 87,
+        "icon": "hat",
+        "color": "#FF6347",
+        "title": "Fashion Blog Post Generator",
+        "description": "Generate a blog post about a fashion trend or style",
+        "category": "generation,fashion,blog",
+        "max_tokens": 1000,
+        "temperature": 0.7,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a blog post about the latest fashion trend: {trend}.\n\n",
+        "response": "Chunky sneakers are making a comeback and taking over the fashion world! These sneakers were popular in the 90s and now they're back and better than ever. With their thick soles and bold designs, they add a unique twist to any outfit.\n\nOne of the best things about chunky sneakers is that they're versatile and can be paired with just about anything. Dress them up with a skirt and blazer or dress them down with denim shorts and a t-shirt. Either way, they add a touch of cool to your look.\n\nAnother great aspect of chunky sneakers is that they're comfortable and perfect for everyday wear. So if you're tired of your regular sneakers, switch things up with a pair of chunky sneakers.\n\nSo, what are you waiting for? Embrace the chunky sneaker trend and add a fun twist to your wardrobe.",
+        "fields": [
+            {
+                "id": "trend",
+                "label": "Trend",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 88,
+        "icon": "shirt",
+        "color": "#BA55D3",
+        "title": "Fashion Outfit Description Generator",
+        "description": "Generate a description of a fashion outfit",
+        "category": "generation,fashion",
+        "max_tokens": 200,
+        "temperature": 0.5,
+        "frequency_penalty": 0.01,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a description of a fashion outfit: {outfit}.\n\n",
+        "response": "Bohemian-Chic is all about effortless style and comfort. Pair a flowy maxi dress with a denim jacket and a wide-brimmed hat for an easy yet stylish look. Accessorize with layered necklaces and tassel earrings for a touch of boho flair. Finish off the outfit with a pair of comfortable gladiator sandals and a woven tote for a complete bohemian-chic look.",
+        "fields": [
+            {
+                "id": "outfit",
+                "label": "Fashion Outfit",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 89,
+        "icon": "pen",
+        "color": "#FF69B4",
+        "title": "Real Estate Listing Description Generator",
+        "description": "Generate a compelling listing description for a real estate property.",
+        "category": "real-estate, generation",
+        "max_tokens": 500,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.2,
+        "prompt": "Generate a compelling listing description for a real estate property. Property: {property} in {location}.\n\n",
+        "response": "Welcome to your dream home in the heart of San Francisco! This charming 3-bedroom house boasts breathtaking views of the city, spacious rooms, and a beautifully landscaped garden. The open-concept kitchen and living room are perfect for entertaining guests and spending quality time with family. With large windows throughout, you'll never miss a chance to take in the stunning views. The bedrooms are spacious and feature ample closet space. The outdoor space is an oasis, perfect for outdoor dining and relaxing. Located in a quiet, friendly neighborhood, this property is just minutes from the city's top restaurants, shopping, and attractions. Don't miss your chance to own a piece of San Francisco's history!",
+        "fields": [
+            {
+                "id": "property",
+                "label": "Property",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            },
+            {
+                "id": "location",
+                "label": "Location",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 90,
+        "icon": "pen",
+        "color": "#DC143C",
+        "title": "Real Estate Neighborhood Description Generator",
+        "description": "Generate a description of a real estate neighborhood.",
+        "category": "real-estate, generation",
+        "max_tokens": 400,
+        "temperature": 0.5,
+        "frequency_penalty": 0.3,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a description of a real estate neighborhood. Neighborhood: {neighborhood}.\n\n",
+        "response": "Beverly Hills is one of the most prestigious neighborhoods in the country. Known for its luxurious homes, celebrity residents, and high-end shopping, this neighborhood is a true representation of the Los Angeles lifestyle. With beautiful tree-lined streets, elegant architecture, and a central location, Beverly Hills offers residents the best of both worlds. Just minutes from downtown Los Angeles and the beach, residents have easy access to all the city has to offer. From world-class dining and shopping, to beautiful parks and cultural attractions, there is always something to do in Beverly Hills. Whether you're looking for a quiet, prestigious neighborhood or a bustling city lifestyle, Beverly Hills is the perfect place to call home.",
+        "fields": [
+            {
+                "id": "neighborhood",
+                "label": "Neighborhood",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 91,
+        "icon": "wikipedia",
+        "color": "#7B68EE",
+        "title": "Wikipedia Article Keyword Extractor",
+        "description": "Extract the keywords from a Wikipedia article.",
+        "category": "keyword,wikipedia",
+        "max_tokens": 50,
+        "prompt": "Extract the key keywords from the Wikipedia article:\n\n{article}\n\n",
+        "response": "Presidents, United States, List, President.",
+        "fields": [
+            {
+                "id": "article",
+                "label": "Wikipedia Article",
+                "type": "text",
+                "min": 1,
+                "max": 2000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 92,
+        "icon": "cart",
+        "color": "#8B008B",
+        "title": "WooCommerce Product Feature List Generator",
+        "description": "Generate a list of features for a WooCommerce product.",
+        "category": "generation,product,woocommerce",
+        "max_tokens": 200,
+        "temperature": 0.5,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.3,
+        "prompt": "Generate a list of features for a product. Product: {product}.\n\n",
+        "response": "HD video resolution\nNight vision\nTwo-way audio\nMotion detection\nMobile app for real-time monitoring\nCloud storage for recorded footage",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 93,
+        "icon": "email",
+        "color": "#32CD32",
+        "title": "Professional Email Introduction",
+        "description": "Generate an introduction for a professional email.",
+        "category": "email,generation",
+        "max_tokens": 500,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.05,
+        "prompt": "Generate an introduction for a professional email. Name: {name}. Reason: {reason}.\n\n",
+        "response": "Dear [Name],\n\nI hope this email finds you well. My name is [Your Name], and I wanted to reach out to you regarding [reason for email]. I believe that [your reason for email] would be of great benefit to [their organization/you], and I would love the opportunity to discuss it further with you.",
+        "fields": [
+            {
+                "id": "name",
+                "label": "Name",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            },
+            {
+                "id": "reason",
+                "label": "Reason",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 94,
+        "icon": "email",
+        "color": "#FFA07A",
+        "title": "Follow-Up Email",
+        "description": "Generate a follow-up email.",
+        "category": "email,generation",
+        "max_tokens": 150,
+        "temperature": 0.6,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a follow-up email. Receiver Name: {receivername}. Subject: {subject}. Sender Name: {sendername}.\n\n",
+        "response": "Dear [Name],\n\nI hope this email finds you well. I wanted to follow up on my previous email regarding [previous email subject]. I just wanted to see if you had a chance to review the information I sent over and if you have any questions or concerns. I am available to discuss further if needed.\n\nThank you for your time and consideration.\n\nBest regards,\n[Your Name]",
+        "fields": [
+            {
+                "id": "receivername",
+                "label": "Receiver Name",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            },
+            {
+                "id": "subject",
+                "label": "Subject",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            },
+            {
+                "id": "sendername",
+                "label": "Sender Name",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 95,
+        "icon": "email",
+        "color": "#FFD700",
+        "title": "Customer Service Reply",
+        "description": "Generate a reply to a customer service email.",
+        "category": "email,generation",
+        "max_tokens": 200,
+        "temperature": 0.5,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a reply to a customer service email. Customer inquiry: {customerinquiry}.\n\n",
+        "response": "Dear [Customer Name],\n\nThank you for reaching out to us regarding the return of your product. We are sorry to hear that you are not satisfied with your purchase.\n\nPlease provide us with your order number and a brief description of the issue you are experiencing, and we will be happy to assist you with the return process.\n\nThank you for your patience and understanding. If you have any further questions or concerns, please do not hesitate to contact us.\n\nBest regards,\n[Your Name]\nCustomer Service",
+        "fields": [
+            {
+                "id": "customerinquiry",
+                "label": "Customer Inquiry",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 96,
+        "icon": "email",
+        "color": "#1E90FF",
+        "title": "Job Application Email",
+        "description": "Generate a job application email.",
+        "category": "email,generation",
+        "max_tokens": 300,
+        "temperature": 0.6,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a job application email. Job: {job}.\n\n",
+        "response": "Dear Hiring Manager,\n\nI am writing to express my interest in the Marketing Manager position at [Company Name]. I am an experienced marketing professional with [number of years] years of experience in developing and executing successful marketing strategies.\n\nMy skills in market research, branding, and communication have enabled me to consistently exceed my goals and drive growth for the companies I have worked for. I am confident that I can bring that same level of success to [Company Name].\n\nIn my current role at [Current Company], I have been responsible for managing [responsibilities], and I have a proven track record of delivering results. I am excited about the opportunity to bring my experience and skills to [Company Name].\n\nThank you for considering my application. I look forward to the opportunity to discuss my qualifications further.\n\nSincerely,\n[Your Name]",
+        "fields": [
+            {
+                "id": "job",
+                "label": "Job",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 97,
+        "icon": "globe",
+        "color": "#6495ED",
+        "title": "Domain Name Suggestion Tool",
+        "description": "Generate domain name suggestions for a business.",
+        "category": "generation,domain",
+        "max_tokens": 200,
+        "temperature": 0.5,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate {numberofsuggestions} domain name suggestions for a {business} business.\n\n",
+        "response": "1. CaffeineHeaven.com 2. Brewtopia.com 3. JavaJoint.com 4. EspressoEmpire.com 5. TheDailyGrind.co",
+        "fields": [
+            {
+                "id": "numberofsuggestions",
+                "label": "Number of Suggestions",
+                "type": "select",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            },
+            {
+                "id": "business",
+                "label": "Business",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 98,
+        "icon": "globe",
+        "color": "#191970",
+        "title": "Domain Name Catchphrase Generator",
+        "description": "Generate a catchphrase for a domain name.",
+        "category": "generation,domain",
+        "max_tokens": 150,
+        "temperature": 0.8,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a catchphrase for the domain name: {domainname}.\n\n",
+        "response": "Get your daily dose of caffeine at CoffeeBuzz.com - Where every sip is a thrill!",
+        "fields": [
+            {
+                "id": "domainname",
+                "label": "Domain Name",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 99,
+        "icon": "globe",
+        "color": "#B0E0E6",
+        "title": "Domain Name Tagline Generator",
+        "description": "Generate a tagline for a domain name.",
+        "category": "generation,domain",
+        "temperature": 0.6,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a tagline for the domain name: {domainname}.\n\n",
+        "response": "Discover your new coffee haven at CoffeeCorner.com - A sip of comfort in every cup.",
+        "fields": [
+            {
+                "id": "domainname",
+                "label": "Domain Name",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 100,
+        "icon": "adv",
+        "color": "#00BFFF",
+        "title": "Advice Generator for Starting a Business",
+        "description": "Generate advice for starting a business.",
+        "category": "coaching,business",
+        "max_tokens": 250,
+        "temperature": 0.7,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate advice for starting a business. Business: {business}.\n\n",
+        "response": "Starting a business is an exciting and challenging journey. Here are some key tips for success: 1) conduct market research to validate your business idea, 2) create a solid business plan, 3) network and build relationships with industry experts, 4) set achievable goals and track progress regularly, 5) stay adaptable and be prepared to pivot if necessary. Remember, success is a marathon, not a sprint - stay focused and persevere!",
+        "fields": [
+            {
+                "id": "business",
+                "label": "Business",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 101,
+        "icon": "adv",
+        "color": "#FFA07A",
+        "title": "Advice Generator",
+        "description": "Generate advice for various topics.",
+        "category": "coaching,relationships",
+        "max_tokens": 250,
+        "temperature": 0.7,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate advice for {topic}.\n\n",
+        "response": "Improving relationships requires effort and commitment from both parties. Here are some tips to strengthen your relationships: 1) communicate openly and honestly, 2) listen actively, 3) show empathy and understanding, 4) be present and attentive, 5) prioritize quality time, 6) express gratitude and appreciation, 7) make an effort to resolve conflicts in a constructive manner. By putting in the effort, you can build deeper, more fulfilling relationships with the people in your life.",
+        "fields": [
+            {
+                "id": "topic",
+                "label": "Topic",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 102,
+        "icon": "marketing",
+        "color": "#228B22",
+        "title": "Social Media Ad Campaign Generator",
+        "description": "Generate an ad campaign for social media marketing.",
+        "category": "generation,marketing,social-media",
+        "max_tokens": 500,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.05,
+        "prompt": "Generate an ad campaign for social media marketing. Product: {product}.\n\n",
+        "response": "Stay hydrated while saving the planet with our Eco-Friendly Water Bottles! Made with 100% recycled materials, our water bottles are perfect for those who care about the environment and want to reduce their carbon footprint. With a variety of colors and sizes to choose from, you're sure to find the perfect bottle for you. And with a leak-proof design, you can take your water bottle anywhere you go. Order now and join the movement to protect the planet! #EcoFriendly #SustainableLiving #WaterBottles",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 103,
+        "icon": "marketing",
+        "color": "#FFA500",
+        "title": "Email Marketing Campaign Generator",
+        "description": "Generate an email marketing campaign for a product.",
+        "category": "generation,email,marketing",
+        "max_tokens": 500,
+        "temperature": 0.7,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate an email marketing campaign for a product. Product: {product}.\n\n",
+        "response": "Unlock the secret to beautiful skin with our Luxury Skincare Line. Made with the finest ingredients, our products will help you achieve a glowing, youthful complexion. From our gentle cleanser to our nourishing moisturizer, our skincare line has everything you need to take your skincare routine to the next level. And with a 30-day money-back guarantee, there's no risk in trying our products. So why wait? Treat yourself to the ultimate skincare experience today!",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 104,
+        "icon": "marketing",
+        "color": "#228B22",
+        "title": "Marketing Landing Page Generator",
+        "description": "Generate a marketing landing page for a new product.",
+        "category": "generation,marketing,landingpage",
+        "max_tokens": 800,
+        "temperature": 0.8,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a marketing landing page for a new product. Product: {product}.\n\n",
+        "response": "Introducing the Smart Thermostat: the ultimate solution for comfortable, energy-efficient heating and cooling in your home.\n\nWith its intuitive, easy-to-use interface and advanced features, the Smart Thermostat makes it simple to control the temperature in your home from anywhere, anytime.\n\nWhether you're away from home or just snuggled up on the couch, the Smart Thermostat gives you the power to adjust your heating and cooling with just a few taps on your smartphone.\n\nAnd, with its cutting-edge energy-saving features, the Smart Thermostat helps you lower your energy bills and do your part for the environment.\n\nOrder now and start enjoying the benefits of smart heating and cooling in your home.\n\nBest regards,\nThe Smart Thermostat Team",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 105,
+        "icon": "star",
+        "color": "#32CD32",
+        "title": "Product Review Generator",
+        "description": "Generate a review for a product.",
+        "category": "generation,review,product",
+        "max_tokens": 500,
+        "temperature": 0.7,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a review for a product. Product: {product}.\n\n",
+        "response": "I recently installed the Smart Home Security System and I'm extremely impressed with its features and performance. The installation process was seamless and the app is very user-friendly. I especially love the ability to control my system from my phone and receive real-time alerts if anything is triggered. The cameras provide crystal clear footage and the system has already deterred a potential break-in. I highly recommend this product to anyone looking for a reliable and affordable security solution for their home.",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 106,
+        "icon": "star",
+        "color": "#FFD700",
+        "title": "Restaurant Review Generator",
+        "description": "Generate a review for a restaurant.",
+        "category": "generation,review,food",
+        "max_tokens": 500,
+        "temperature": 0.6,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.2,
+        "prompt": "Generate a review for a restaurant. Restaurant: {restaurant}.\n\n",
+        "response": "I recently dined at the Italian Bistro and it was a fantastic experience from start to finish. The ambiance was cozy and inviting, and the staff was very friendly and accommodating. The menu had a great variety of options and everything we tried was delicious. I particularly enjoyed the pasta dishes and the tiramisu for dessert. The wine list was also impressive and the sommelier made great recommendations. I would highly recommend this restaurant to anyone looking for a romantic evening out or a fun night with friends.",
+        "fields": [
+            {
+                "id": "restaurant",
+                "label": "Restaurant",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 107,
+        "icon": "dollar",
+        "color": "#008080",
+        "title": "Sales Email Generator",
+        "description": "Generate an effective sales email to convert leads into customers.",
+        "category": "generation,sales,email",
+        "max_tokens": 300,
+        "temperature": 0.7,
+        "frequency_penalty": 0.05,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a sales email for a new product launch. Product: {product}.\n\n",
+        "response": "Dear [Name],\n\nAre you tired of high electricity bills and want to go green? Our Solar Panel System is the solution for you. Our panels are made with the highest quality materials and are designed to provide maximum energy efficiency. Plus, with our easy installation process, you can start saving on your electricity bills in no time.\n\nDon't miss out on this opportunity to join the renewable energy revolution. Contact us today to schedule a free consultation and learn more about our Solar Panel System.\n\nBest regards,\n[Your Name]",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 108,
+        "icon": "dollar",
+        "color": "#9400D3",
+        "title": "Sales Follow-Up Email Generator",
+        "description": "Generate a follow-up email to boost sales and close deals.",
+        "category": "generation,sales,email",
+        "max_tokens": 400,
+        "temperature": 0.6,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.05,
+        "prompt": "Generate a follow-up email after a sales call. Product: {product}.\n\n",
+        "response": "Dear [Name],\n\nI wanted to follow up on our recent conversation about our Fitness Tracking Watch. I hope you had a chance to consider the benefits of incorporating this technology into your fitness routine. Our watch provides real-time tracking of your heart rate, steps, and calorie burn, making it easy to track your progress and reach your fitness goals.\n\nIf you have any questions or concerns, please let me know. I would be happy to set up another call to discuss in more detail.\n\nBest regards,\n[Your Name]",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 109,
+        "icon": "tiktok",
+        "color": "#FF1493",
+        "title": "TikTok Video Caption Generator",
+        "description": "Generate a catchy caption for a TikTok video.",
+        "category": "generation,tiktok,video",
+        "temperature": 0.7,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.05,
+        "prompt": "Generate a catchy caption for a TikTok video. Video Content: {videocontent}.\n\n",
+        "response": "Sweat now, shine later 💪🏼 #fitness #workout #motivation",
+        "fields": [
+            {
+                "id": "videocontent",
+                "label": "Video Content",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 110,
+        "icon": "tiktok",
+        "color": "#000",
+        "title": "TikTok Trending Hashtag Generator",
+        "description": "Generate trending hashtags for a TikTok video.",
+        "category": "generation,tiktok,video",
+        "max_tokens": 20,
+        "temperature": 0.9,
+        "presence_penalty": 0.1,
+        "prompt": "Generate trending hashtags for a TikTok video that features: {videocontent}.\n\n",
+        "response": "#dance #music #tiktokdance #trending #popular",
+        "fields": [
+            {
+                "id": "videocontent",
+                "label": "Video Content",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 111,
+        "icon": "youtube",
+        "color": "#FFA07A",
+        "title": "YouTube Video Title Generator",
+        "description": "Generate a catchy and attention-grabbing title for a YouTube video.",
+        "category": "generation,video,youtube",
+        "temperature": 0.8,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.3,
+        "prompt": "Generate a catchy and attention-grabbing title for a YouTube video. The video is about: {videocontent}.\n\n",
+        "response": "Wake Up and Shine: 10 Minute Morning Yoga Routine",
+        "fields": [
+            {
+                "id": "videocontent",
+                "label": "Video Content",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 112,
+        "icon": "youtube",
+        "color": "#00BFFF",
+        "title": "YouTube Video Description Generator",
+        "description": "Generate a short and engaging description for a YouTube video.",
+        "category": "generation,video,youtube",
+        "max_tokens": 300,
+        "temperature": 0.5,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a short and engaging description for a YouTube video. The video is about {videocontent}.\n\n",
+        "response": "Get ready to explore the best destinations in Europe! From the charming streets of Paris to the picturesque canals of Venice, this video will take you on a journey through the top 10 must-visit destinations. Discover the rich history and culture of Europe and start planning your next adventure. Don't forget to hit the subscribe button for more travel content!",
+        "fields": [
+            {
+                "id": "videocontent",
+                "label": "Video Content",
+                "type": "text",
+                "min": 1,
+                "max": 1000
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 10,
+        "icon": "hackernews",
+        "color": "#EB6221",
+        "title": "Hackernews Submission",
+        "description": "Generates a compelling and informative submission for Hacker News",
+        "category": "generation,social-media",
+        "max_tokens": 700,
+        "prompt": "Generate a submission for Hacker News that discusses: {discussiontopic}.\n\n",
+        "response": "As AI continues to advance, it is becoming increasingly clear that it will have a significant impact on the job market. In the next 5-10 years, we are likely to see a shift away from jobs that can be automated, such as data entry and repetitive tasks, towards jobs that require human skills such as creativity, emotional intelligence, and critical thinking. However, this shift will not happen overnight and it's important for individuals and organizations to start planning for the changes ahead. Some industries will be hit harder than others, and governments and private sector should be proactive in helping workers transition to new roles. Ultimately, the way we work and the skills we value will change, and it's essential that we adapt and evolve to stay ahead of the curve.",
+        "fields": [
+            {
+                "id": "discussiontopic",
+                "label": "Topic",
+                "type": "text",
+                "min": 5,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 114,
+        "icon": "coach",
+        "color": "#00BFFF",
+        "title": "Business Growth Coach",
+        "description": "Get expert insights to drive business growth.",
+        "category": "coaching,business",
+        "max_tokens": 300,
+        "temperature": 0.5,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Create a list of 10 potential solutions for a given problem, including straightforward ideas, to aid in resolving the issue.\n\nProblem: Struggling to grow your business\nSolution Ideas:\n\n1. Take advantage of digital marketing and advertising platforms \n2. Network with other businesses and industry professionals \n3. Develop a customer loyalty program \n4. Implement an effective pricing strategy \n5. Increase visibility on social media \n6. Offer special deals or discounts \n7. Optimize product listing descriptions \n8. Utilize influencer marketing \n9. Develop a referral program \n10. Invest in search engine optimization (SEO)\n\nProblem: {problem}\nSolution Ideas:\n\n",
+        "response": "Problem: Grow my business\nSolution Ideas:\n\n1. Expand product offerings \n2. Create a comprehensive marketing strategy \n3. Use email campaigns to reach new customers \n4. Increase visibility on social media \n5. Utilize video marketing \n6. Analyze customer feedback and reviews \n7. Develop relationships with key industry influencers \n8. Offer special discounts or promotions \n9. Invest in search engine optimization (SEO) \n10. Utilize online advertising platforms",
+        "fields": [
+            {
+                "id": "problem",
+                "label": "Problem",
+                "type": "text",
+                "min": 5,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 115,
+        "icon": "coach",
+        "color": "#00BFFF",
+        "title": "Business Strategist",
+        "description": "Get tailored strategies for business success.",
+        "category": "coaching,business",
+        "max_tokens": 300,
+        "temperature": 0.5,
+        "frequency_penalty": 0.2,
+        "presence_penalty": 0.1,
+        "prompt": "Develop a list of 10 innovative strategies for overcoming a business challenge.\n\nProblem: Difficulty retaining customers\nSolution Ideas:\n\n1. Create a customer loyalty program \n2. Offer personalized promotions and discounts \n3. Provide excellent customer service \n4. Stay engaged with customers through email and social media \n5. Continuously improve your product offerings \n6. Offer a satisfaction guarantee \n7. Ask for customer feedback and use it to make improvements \n8. Host customer appreciation events \n9. Partner with complementary businesses to offer joint promotions \n10. Keep customers informed of company news and updates\n\nProblem: {problem}\nSolution Ideas:\n\n",
+        "response": "Problem: Boost sales\nSolution Ideas:\n\n1. Utilize social media advertising \n2. Offer special deals or discounts \n3. Implement an effective pricing strategy \n4. Develop a referral program \n5. Increase product visibility through search engine optimization (SEO) \n6. Utilize influencer marketing \n7. Host customer appreciation events \n8. Provide excellent customer service \n9. Expand product offerings \n10. Create a comprehensive marketing strategy",
+        "fields": [
+            {
+                "id": "problem",
+                "label": "Problem",
+                "type": "text",
+                "min": 5,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 116,
+        "icon": "thumbs",
+        "color": "#9400D3",
+        "title": "Mindfulness Coach",
+        "description": "Practice mindfulness and reduce stress for a better quality of life.",
+        "category": "coaching",
+        "max_tokens": 400,
+        "temperature": 0.7,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.2,
+        "prompt": "Create a list of 10 mindfulness exercises to improve {problem}.\n\n",
+        "response": "Exercise 11: Mindful listening \nExercise 12: Creative visualization \nExercise 13: Sensory exploration \nExercise 14: Mantra repetition \nExercise 15: Affirmations \nExercise 16: Chanting \nExercise 17: Body-mind connection exercises \nExercise 18: Yoga or Tai Chi \nExercise 19: Reflection through journaling \nExercise 20: Mindful color therapy",
+        "fields": [
+            {
+                "id": "problem",
+                "label": "Improvement Area",
+                "type": "text",
+                "min": 5,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    },
+    {
+        "id": 117,
+        "icon": "facebook",
+        "color": "#191970",
+        "title": "Facebook Post Caption Generator",
+        "description": "Generate a catchy caption for a Facebook post.",
+        "category": "generation,social-media,facebook",
+        "max_tokens": 80,
+        "temperature": 0.5,
+        "frequency_penalty": 0.1,
+        "presence_penalty": 0.1,
+        "prompt": "Generate a catchy caption for a Facebook post about a new product launch. Product: {product}\n\n",
+        "response": "Ride into the future with our new Electric Bike! 🚴‍♂️💨 #electricbike #newproductlaunch",
+        "fields": [
+            {
+                "id": "product",
+                "label": "Product",
+                "type": "text",
+                "min": 5,
+                "max": 120
+            }
+        ],
+        "editor": "textarea"
+    }
+]
